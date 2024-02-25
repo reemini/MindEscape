@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'courses',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,25 @@ WSGI_APPLICATION = 'MindescapeA.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'MEDB_Users',
+        'USER': 'root',
+        'PASSWORD': 'gangOfFour',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'courses': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'MEDB_Courses',
+        'USER': 'root',
+        'PASSWORD': 'gangOfFour',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+
+
 }
+
 
 
 # Password validation
