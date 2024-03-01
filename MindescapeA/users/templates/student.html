@@ -1,0 +1,147 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho%3A400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder%3A400" />
+    <link rel="stylesheet" href="page-1/styles/student-profile.css" />
+    <link rel="stylesheet" href="{% static 'css/student.css' %}" />
+</head>
+    
+
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <img class="logo" src="{% static 'images/image-12.png' %}"
+                alt="Mindscape Academy Logo" />
+            <span class="mindscape-academy">Mindscape Academy</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Courses</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+        </div>
+        <button class="search-button">Search</button>
+        <a href="edit-profile.html" class="profile-button">Profile</a>
+    </div>
+
+    <!-- Main Content (Courses Section) -->
+    <div class="main-content">
+        <!-- Student Profile Info -->
+        <div class="student-profile">
+            <img class="student-avatar"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
+                alt="Student Avatar" />
+            <div class="student-details">
+                <p class="student-name">Mohammed Ahmed</p>
+                <div class="student-role">Software Engineer</div>
+                <div class="purple-box">
+                    <p class="role">Student</p>
+                </div>
+                <div class="student-info">
+                    <p class="student-email">A3Mohammed@gmail.com</p>
+                    <hr />
+                    <p class="student-courses">Registered Courses: 2</p>
+                    <div class="purple-box edit-profile" onclick="window.location.href='edit-profile.html'">
+                        <p class="role">Edit Profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Content -->
+        <div class="course-section">
+            <h2 class="course-header">My Courses</h2>
+            <!-- Course 1 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image"
+                    src="{% static 'images/rectangle-12-e2R.png' %}"
+                    alt="Course 1" />
+                <div class="course-title">Course 1</div>
+                <div class="course-details">
+                    <p>100 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>85%</p>
+                    </div>
+                    <p>5 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image"
+                    src="{% static 'images/rectangle-12-e2R.png' %}"
+                    alt="Course 2" />
+                <div class="course-title">Course 2</div>
+                <div class="course-details">
+                    <p>150 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>92%</p>
+                    </div>
+                    <p>8 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <!-- Add more courses as needed... -->
+        </div>
+
+        <!-- Auto Generated Courses Section -->
+        <div class="course-section">
+            <h2 class="course-header">Auto Generated Courses</h2>
+            <!-- Auto-Generated Course 1 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image"
+                    src="{% static 'images/rectangle-12-e2R.png' %}"
+                    alt="Auto Course 1" />
+                <div class="course-title">Auto Course 1</div>
+                <div class="course-details">
+                    <p>50 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>78%</p>
+                    </div>
+                    <p>3 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Auto-Generated Course 2 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-12-e2R.png' %}
+                    alt="Auto Course 2" />
+                <div class="course-title">Auto Course 2</div>
+                <div class="course-details">
+                    <p>80 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>94%</p>
+                    </div>
+                    <p>5 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <!-- Add more auto-generated courses as needed... -->
+        </div>
+    </div>
+
+   
+</body>
+
+</html>

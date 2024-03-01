@@ -1,0 +1,153 @@
+{% load static %}
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="{% static 'css/teacher.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho%3A400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder%3A400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imprima%3A400" />
+</head>
+    
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <img class="logo" src="{% static 'images/image-12.png' %}" alt="Mindscape Academy Logo" />
+            <span class="mindscape-academy-vRT">Mindscape Academy</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Courses</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+        </div>
+        <button class="search-button">Search</button>
+        <a href="edit-profile.html" class="profile-button">Profile</a>
+    </div>
+
+    <!-- Main Content (Teacher Profile and Courses Section) -->
+    <div class="main-content">
+        <!-- Teacher Profile Info -->
+        <div class="teacher-profile">
+            <!-- Customize teacher profile information -->
+            <img class="teacher-avatar" src="{% static 'images/ellipse-220.png' %}" alt="Teacher Avatar" />
+            <div class="teacher-details">
+                <p class="teacher-name">Ali Shokry</p>
+                <div class="teacher-role">UI - UX Designer</div>
+                <div class="purple-box">
+                    <p class="role">Teacher</p>
+                </div>
+                <div class="teacher-info">
+                    <p class="teacher-email">SrAli@gmail.com</p>
+                    <hr />
+                    <p class="teacher-courses">Courses Published: 3</p>
+                    <div class="purple-box edit-profile" onclick="window.location.href='edit-profile.html'">
+                        <p class="role">Edit Profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Content -->
+        <div class="course-section">
+            <h2 class="course-header">
+                My Published Courses
+                <button class="create-course-button" onclick="window.location.href='create-course.html'">Create Course</button>
+            </h2>
+
+            <!-- Course 1 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-12.png' %}" alt="Course 1" />
+                <div class="course-title">ALRHAZ</div>
+                <div class="course-details">
+                    <p>210 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>9524</p>
+                    </div>
+                    <p>13 Classes</p>
+                </div>
+                <!-- Add more course details or customize as needed... -->
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-14-uVF.png' %}" alt="Course 2" />
+                <div class="course-title">PRAKTIKA</div>
+                <div class="course-details">
+                    <p>386 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>1K</p>
+                    </div>
+                    <p>41 Classes</p>
+                </div>
+                <!-- Add more course details or customize as needed... -->
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 3" />
+                <div class="course-title">ADCRUS</div>
+                <div class="course-details">
+                    <p>500 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>5436</p>
+                    </div>
+                    <p>10 Classes</p>
+                </div>
+                <!-- Add more course details or customize as needed... -->
+            </div>
+
+            <!-- Course 4 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 4" />
+                <div class="course-title">ADCRUS</div>
+                <div class="course-details">
+                    <p>500 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>5436</p>
+                    </div>
+                    <p>10 Classes</p>
+                </div>
+                <!-- Add more course details or customize as needed... -->
+            </div>
+
+            <!-- Course 5 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 5" />
+                <div class="course-title">ADCRUS</div>
+                <div class="course-details">
+                    <p>500 Students</p>
+                    <div class="reviews">
+                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <p>5436</p>
+                    </div>
+                    <p>10 Classes</p>
+                </div>
+                <!-- Add more course details or customize as needed... -->
+            </div>
+
+            <!-- Add more courses as needed... -->
+
+            <!-- Create additional courses with the same structure as above... -->
+
+        </div>
+    </div>
+</body>
+
+</html>
+

@@ -1,0 +1,220 @@
+
+        body {
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            overflow-x: hidden; /* Hide horizontal scrolling */
+        }
+
+        .student-profile {
+            width: 200px; /* Adjust the width as needed */
+            position: fixed;
+            left: 0;
+            top: 70px; /* Adjust the top value to leave space for the header */
+            background-color: #ffffff;
+            padding: 1rem;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            overflow-y: auto; /* Allow vertical scrolling */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .student-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .student-details {
+            color: #543786;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            color: #543786;
+            width: 100%;
+            z-index: 2;
+            position: fixed;
+            top: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .mindscape-academy {
+            font-family: 'Imprima', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+            color: #543786;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            width: 494px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid #000000;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 25px;
+            margin-right: 5px;
+        }
+
+        .search-button,
+        .profile-button {
+            width: 160px;
+            height: 45px;
+            border: none;
+            border-radius: 25px;
+            background-color: #543786;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .profile-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .profile-button:hover {
+            text-decoration: none;
+        }
+
+        .profile-button:focus {
+            outline: none;
+        }
+
+        .main-content {
+            margin-top: 70px; /* Adjust margin to leave space for the fixed header */
+            margin-left: 200px; /* Adjust margin to accommodate the fixed student profile */
+            flex-grow: 1;
+            padding: 20px;
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow-x: auto; /* Allow horizontal scrolling */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-section {
+            width: calc(100% - 220px); /* Adjust the width as needed */
+            margin-bottom: 20px; /* Add margin between course sections */
+            padding: 20px;
+            border: 1px solid #ddd;
+            overflow-x: auto; /* Allow horizontal scrolling within the course section */
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .course-header {
+            font-size: 1.5rem; /* Adjust the font size as needed */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .course-info {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .course-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .course-title {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .course-details {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .course-details p {
+            margin-right: 10px;
+        }
+
+        .course-details img {
+            max-width: 20px;
+            margin-right: 5px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: linear-gradient(to right, #4caf50, #ffeb3b);
+            border-radius: 4px;
+        }
+
+        .reviews {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviews img {
+            max-width: 20px;
+            margin-right: 5px;
+        }
+
+        .purple-box {
+            background-color:   #543786; /* Replace with the desired background color */
+            color: white
+
+; /* Replace with the desired text color */
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .role,
+        .edit-profile {
+            margin: 0;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .edit-profile:hover {
+            background-color: purple;
+            color: white;
+        }
