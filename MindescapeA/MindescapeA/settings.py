@@ -77,22 +77,22 @@ WSGI_APPLICATION = 'MindescapeA.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MEDB_Users',
-        'USER': 'root',
-        'PASSWORD': 'gangOfFour',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    },
-    'courses': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MEDB_Courses',
-        'USER': 'root',
-        'PASSWORD': 'gangOfFour',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'MEDB_Users',
+    #     'USER': 'root',
+    #     'PASSWORD': 'gangOfFour',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # },
+    # 'courses': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'MEDB_Courses',
+    #     'USER': 'root',
+    #     'PASSWORD': 'gangOfFour',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # },
 
 
 }

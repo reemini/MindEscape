@@ -13,3 +13,6 @@ def generated_course(request):
 
 def courseinfo(request):
     return render(request,'courseinfo.html')
+
+def firstPageofCourseCreate(request):
+    return render(request,'firstPageofCourseCreate.html')
