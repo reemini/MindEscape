@@ -1,8 +1,26 @@
+/* Reset default styles */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Apply styles to the body */
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
 }
 
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -39,8 +57,10 @@ body {
   text-decoration: none;
 }
 
+/* Search bar styles */
 .search-bar {
-  width: 494px;
+  width: 100%;
+  max-width: 494px;
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -57,6 +77,7 @@ body {
   margin-right: 5px;
 }
 
+/* Button styles */
 .search-button,
 .profile-button {
   width: 160px;
@@ -84,6 +105,7 @@ body {
   outline: none;
 }
 
+/* Main content styles */
 .main-content {
   display: flex;
   flex-wrap: wrap;
@@ -92,41 +114,68 @@ body {
   margin: auto;
 }
 
+/* Profile section styles */
 .profile-left {
   float: left;
   width: 25%;
   margin-right: 103px; /* Set margin to 103px from the left */
 }
 
-.profile-info {
-  margin-top: 40px;
-  margin-left: -150px;
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .profile-form div input,
+  .profile-form div textarea,
+  .password-input {
+    width: 100%;
+  }
+
+
+  
+  .search-bar {
+    max-width: none;
+  }
 }
+
+
+
 
 .profile-info h2 {
   margin: 0 0 10px;
 }
+.profile-left {
+  float: left;
+  width: 30%;
+  margin-right: 50px;
+}
 
 .profile-picture-container {
-width: 60%;
-height: 0;
-padding-bottom: 70%;
-position: relative;
-background-color: black; /* Add black background */
-margin-left: -180px;
-margin-top: 100px;
-overflow: hidden;
-border-radius: 50%; /* Make the border circular */
+  width: 60%;
+  height: 0;
+  padding-bottom: 70%;
+  position: relative;
+  background-color: black;
+  margin-left: -95px; /* Adjusted margin to move the avatar to the left */
+  margin-top: 50px;
+  overflow: hidden;
+  border-radius: 50%;
 }
+
+.profile-info {
+  margin-top: 40px;
+  margin-left: -60px;
+  
+ /* Adjusted margin to move the name and email to the left */
+
+}
+
 
 .profile-picture {
-width: 100%;
-height: 100%;
-object-fit: cover;
-border: 2px solid #000; /* Add a thin black border */
-border-radius: 50%; /* Ensure the circular border */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #000;
+  border-radius: 50%;
 }
-
 
 .profile-picture-input {
   position: absolute;
@@ -138,16 +187,19 @@ border-radius: 50%; /* Ensure the circular border */
 
 .profile-form {
   flex-grow: 1;
-  width: calc(75% - 20px); /* Adjust width and margin as needed */
+  width: calc(75% - 60px); /* Increase left margin to 40px */
   margin-top: -300px;
-  
+  margin-left: 60px; /* Add more left margin for extra space */
 }
 
 .profile-form form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding-left: 60px; /* Increase left padding to match the margin */
 }
+
+
 
 .profile-form div {
   flex: 1;
@@ -186,7 +238,7 @@ border-radius: 50%; /* Ensure the circular border */
 }
 
 .profile-form button {
-  width: 100%;
+  width: 30%;
   padding: 10px;
   background-color: #543786;
   color: #ffffff;
@@ -194,559 +246,13 @@ border-radius: 50%; /* Ensure the circular border */
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-form textarea {
   width: 825px;
-  height: 193px
-
-;
+  height: 193px;
 }
 
-@media (max-width: 768px) {
-  .profile-form div input,
-  .profile-form div textarea,
-  .password-input {
-      width: 100%;
-  }
-
-  .profile-left {
-      float: none;
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px; /* Add margin bottom to provide spacing on smaller screens */
-  }
-}
-html {
-  font-size: 62.5%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ul, li {
-  list-style: none;
-}
-
-input {
-  border: none;
-}
-
-body {
-  width: 144rem;
-}
-
-.edit-profile-1Cq {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF {
-  box-sizing: border-box;
-  padding: 2.3rem 3.2rem 2.4rem 3.5rem;
-  width: 100%;
-  height: 13.8rem;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .group-1000015010-dED {
-  margin-right: 2.2rem;
-  width: 25.4rem;
-  height: 100%;
-  position: relative;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .group-1000015010-dED .image-12-NBo {
-  width: 12.8rem;
-  height: 9.1rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  vertical-align: top;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .group-1000015010-dED .mindscape-academy-J5T {
-  width: 16.1rem;
-  height: 3.2rem;
-  position: absolute;
-  left: 9.3rem;
-  top: 2.7rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2425;
-  color: #543786;
-  font-family: Rancho, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .brows-yhP {
-  margin-right: 1.025rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.16;
-  color: #000000;
-  font-family: Imprima, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .eoskeyboardarrowdownoutlined-JUm {
-  margin: 0.501rem 2.825rem 0rem 0rem;
-  width: 2.05rem;
-  height: 1.2659rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .brows-1e5 {
-  margin-right: 4.6rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.16;
-  color: #000000;
-  font-family: Imprima, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .auto-group-p9xq-kbf {
-  margin: 2.3rem 3.5rem 1.8rem 0rem;
-  box-sizing: border-box;
-  padding: 0.738rem 2.467rem 1.129rem 4.238rem;
-  height: calc(100% - 4.1rem);
-  display: flex;
-  align-items: center;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .auto-group-p9xq-kbf .eossearchfilled-dvM {
-  margin-right: 1.8289rem;
-  width: 3.1336rem;
-  height: 3.1336rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .auto-group-p9xq-kbf .search-for-course-NN9 {
-  margin: 0rem 14.967rem 0.009rem 0rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: rgba(0, 0, 0, 0.8999999762);
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .auto-group-p9xq-kbf .eosmicnonefilled-GTX {
-  margin-bottom: 0.2461rem;
-  width: 1.8667rem;
-  height: 2.6125rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .brows-ktV {
-  margin: 0.6rem 0.825rem 0rem 0rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.16;
-  color: #000000;
-  font-family: Imprima, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .eoskeyboardarrowdownoutlined-H7j {
-  margin: 1.101rem 0.825rem 0rem 0rem;
-  width: 2.05rem;
-  height: 1.2659rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .vector-obs {
-  margin: 0.9rem 2.4rem 0rem 0rem;
-  width: 2.9rem;
-  height: 3.2rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-djpk-8oF .group-18-wCH {
-  margin: 2.8rem 0rem 1.8rem 0rem;
-  width: 17.8rem;
-  height: calc(100% - 4.6rem);
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: #ffffff;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #543786;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm {
-  width: 100%;
-  height: 88.6rem;
-  position: relative;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-bkkq-hKs {
-  width: 89.7rem;
-  height: 8.3rem;
-  position: absolute;
-  left: 10.3rem;
-  top: 5.1rem;
-  display: flex;
-  align-items: flex-end;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-bkkq-hKs .edit-profile-p9b {
-  margin: 0rem 7.2rem 2.4rem 0rem;
-  font-size: 5rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-bkkq-hKs .first-name-XJu {
-  margin-right: 30.4rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-bkkq-hKs .last-name-rMB {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s {
-  width: 112.4rem;
-  height: 33.4rem;
-  position: absolute;
-  left: 14.4rem;
-  top: 42.1rem;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd {
-  margin: 9.4rem 12.1rem 11.4rem 0rem;
-  width: 17.8rem;
-  height: calc(100% - 20.8rem);
-  position: relative;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-43-qD7 {
-  width: 17.8rem;
-  height: 4.5rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 2.2rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: #ffffff;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #543786;
-  border-radius: 0.5rem;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-44-hm7 {
-  width: 17.8rem;
-  height: 12.6rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-44-hm7 .auto-group-lqbf-eRT {
-  margin-bottom: 3.6rem;
-  box-sizing: border-box;
-  padding: 0.875rem 5rem 0.9rem 5.267rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: #543786;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-44-hm7 .auto-group-lqbf-eRT .eosmicnonefilled-Mam {
-  margin: 0rem 0.667rem 0.113rem 0rem;
-  width: 1.8667rem;
-  height: 2.6125rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-44-hm7 .auto-group-lqbf-eRT .help-Tdo {
-  margin-top: 0.125rem;
-  font-size: 2.2rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: #ffffff;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-uvjb-Wgd .group-44-hm7 .group-43-meV {
-  width: 100%;
-  height: 4.5rem;
-  font-size: 2.2rem;
-  font-weight: 600;
-  line-height: 1.175;
-  color: #ffffff;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #543786;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP {
-  width: 82.5rem;
-  height: 100%;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-fp9b-mY1 {
-  margin-bottom: 1.1rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-fp9b-mY1 .auto-group-mk2q-WkV {
-  margin: 0rem 3.7rem 0.2rem 0rem;
-  box-sizing: border-box;
-  padding: 3.8rem 1.9rem 2rem 1.9rem;
-  width: 39.4rem;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-fp9b-mY1 .auto-group-fgbp-jt9 {
-  margin-top: 0.2rem;
-  box-sizing: border-box;
-  padding: 3.4rem 2.5rem 2.2rem 2.4rem;
-  display: flex;
-  align-items: center;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-fp9b-mY1 .auto-group-fgbp-jt9 .item--U53 {
-  margin: 0.2rem 13.9rem 0rem 0rem;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-fp9b-mY1 .auto-group-fgbp-jt9 .vector-n5j {
-  margin-bottom: 1.3rem;
-  width: 3.1rem;
-  height: 2.5rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .bio-gB7 {
-  margin-bottom: 0.4rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-f2ah-b3s .auto-group-dunu-DmP .auto-group-amid-R8h {
-  box-sizing: border-box;
-  padding: 2.9rem 3.7rem;
-  width: 100%;
-  height: 19.3rem;
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-rdrd-gqK {
-  width: 82.5rem;
-  height: 9.4rem;
-  position: absolute;
-  left: 44.3rem;
-  top: 13.9rem;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-rdrd-gqK .auto-group-ykem-ciy {
-  margin-right: 3.7rem;
-  box-sizing: border-box;
-  padding: 2.7rem 1.9rem 3.7rem 1.9rem;
-  width: 39.4rem;
-  height: 100%;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-rdrd-gqK .auto-group-mvhw-rtD {
-  box-sizing: border-box;
-  padding: 2.8rem 2.4rem 3.6rem 2.4rem;
-  width: 39.4rem;
-  height: 100%;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-ta9b-KG1 {
-  width: 82.5rem;
-  height: 9.8rem;
-  position: absolute;
-  left: 44.3rem;
-  top: 28rem;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-ta9b-KG1 .auto-group-ju9s-dnV {
-  margin: 0rem 3.7rem 0.4rem 0rem;
-  box-sizing: border-box;
-  padding: 3rem 1.5rem 3.4rem 1.5rem;
-  width: 39.4rem;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-ta9b-KG1 .auto-group-u2bp-6AH {
-  margin-top: 0.4rem;
-  box-sizing: border-box;
-  padding: 3.3rem 2.4rem 3.1rem 2.4rem;
-  width: 39.4rem;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.175;
-  color: #5d5b5b;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #000000;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-cik7-9PT {
-  width: 58.4rem;
-  height: 3rem;
-  position: absolute;
-  left: 44.3rem;
-  top: 38.6rem;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-cik7-9PT .password-sqF {
-  margin-right: 31.9rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-cik7-9PT .re-password-QaH {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-x2of-925 {
-  width: 47.8rem;
-  height: 3rem;
-  position: absolute;
-  left: 44.3rem;
-  top: 24.4rem;
-  display: flex;
-  align-items: center;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-x2of-925 .email-UKF {
-  margin-right: 36.7rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.edit-profile-1Cq .auto-group-v4lm-Yxm .auto-group-x2of-925 .age-p8D {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.175;
-  color: #000000;
-  font-family: Raleway, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
+/* Additional styles for other elements... */

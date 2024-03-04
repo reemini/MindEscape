@@ -41,11 +41,13 @@
         <!-- Teacher Profile Info -->
         <div class="teacher-profile">
             <!-- Customize teacher profile information -->
-            <img class="teacher-avatar" src="{% static 'images/ellipse-220.png' %}" alt="Teacher Avatar" />
+           <!-- Modified teacher avatar image -->
+<img class="teacher-avatar" src="{% static 'images/crs1.png' %}" alt="Teacher Avatar" onclick="openPopup('./assets/rectangle-16-hiD.png')" />
+
             <div class="teacher-details">
                 <p class="teacher-name">Ali Shokry</p>
                 <div class="teacher-role">UI - UX Designer</div>
-                <div class="purple-box">
+                <div class="teacher-role">
                     <p class="role">Teacher</p>
                 </div>
                 <div class="teacher-info">
@@ -57,6 +59,14 @@
                     </div>
                 </div>
             </div>
+            <!-- HTML structure for the pop-up box -->
+<div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img class="popup-image" id="popupImage" src="" alt="Profile Image" />
+    </div>
+</div>
+
         </div>
 
         <!-- Courses Content -->
@@ -68,12 +78,12 @@
 
             <!-- Course 1 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-12.png' %}" alt="Course 1" />
+                <img class="course-image" src="{% static 'images/crs1.png' %}" alt="Course 1" />
                 <div class="course-title">ALRHAZ</div>
                 <div class="course-details">
                     <p>210 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="{% static 'images/star.png' %}" alt="Stars" />
                         <p>9524</p>
                     </div>
                     <p>13 Classes</p>
@@ -83,12 +93,12 @@
 
             <!-- Course 2 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-14-uVF.png' %}" alt="Course 2" />
+                <img class="course-image" src="{% static 'images/crs1.png' %}" alt="Course 2" />
                 <div class="course-title">PRAKTIKA</div>
                 <div class="course-details">
                     <p>386 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="{% static 'images/star.png' %}"  alt="Stars" />
                         <p>1K</p>
                     </div>
                     <p>41 Classes</p>
@@ -98,12 +108,12 @@
 
             <!-- Course 3 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 3" />
+                <img class="course-image" src="{% static 'images/crs1.png' %}" alt="Course 3" />
                 <div class="course-title">ADCRUS</div>
                 <div class="course-details">
                     <p>500 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="{% static 'images/star.png' %}"  alt="Stars" />
                         <p>5436</p>
                     </div>
                     <p>10 Classes</p>
@@ -113,12 +123,12 @@
 
             <!-- Course 4 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 4" />
+                <img class="course-image"src="{% static 'images/crs1.png' %}"  alt="Course 4" />
                 <div class="course-title">ADCRUS</div>
                 <div class="course-details">
                     <p>500 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="{% static 'images/star.png' %}"  alt="Stars" />
                         <p>5436</p>
                     </div>
                     <p>10 Classes</p>
@@ -128,12 +138,12 @@
 
             <!-- Course 5 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 5" />
+                <img class="course-image" src="{% static 'images/crs1.png' %}"  alt="Course 5" />
                 <div class="course-title">ADCRUS</div>
                 <div class="course-details">
                     <p>500 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="{% static 'images/star.png' %}" alt="Stars" />
                         <p>5436</p>
                     </div>
                     <p>10 Classes</p>
@@ -147,6 +157,23 @@
 
         </div>
     </div>
+    <script>
+        // JavaScript to open the pop-up
+function openPopup(imagePath) {
+    var popupContainer = document.getElementById("popupContainer");
+    var popupImage = document.getElementById("popupImage");
+
+    popupImage.src = imagePath;
+    popupContainer.style.display = "flex";
+}
+
+// JavaScript to close the pop-up
+function closePopup() {
+    var popupContainer = document.getElementById("popupContainer");
+    popupContainer.style.display = "none";
+}
+
+    </script>
 </body>
 
 </html>

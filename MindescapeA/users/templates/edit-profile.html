@@ -20,7 +20,8 @@
 <body>
     <div class="header">
         <div class="logo-container">
-            <img class="logo" src="{% static 'images/image-12.png' %}" alt="Mindscape Academy Logo" />
+            <img class="logo" src="{% static 'images/image-12.png' %}"
+                alt="Mindscape Academy Logo" />
             <span class="mindscape-academy">Mindscape Academy</span>
         </div>
         <div class="nav-links">
@@ -38,14 +39,15 @@
     <div class="main-content">
         <div class="profile-left">
             <div class="profile-picture-container">
-                <img class="profile-picture" src="{% static 'images/profile-image.jpg' %}"
-                alt="Profile Picture" />
+                <img class="profile-picture" src="{% static 'images/crs1.png' %}"  alt="Profile Picture" />
+
                 <input type="file" class="profile-picture-input" />
+
             </div>
             <div class="profile-info">
                 <h2>John Doe</h2>
                 <p>Email: john.doe@example.com</p>
-                <button>Save</button>
+               
             </div>
         </div>
 
@@ -93,7 +95,7 @@
                     <textarea id="bio" name="bio" rows="4" style="width: 825px; height: 193px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
                 </div>
 
-                <button type="submit">Save</button>
+                <button type="submit" >Save</button>
             </form>
         </div>
     </div>
@@ -112,22 +114,22 @@
             }
         }
 
-        // Add event listener for the profile picture input
         document.querySelector('.profile-picture-input').addEventListener('change', function (event) {
-            var profilePicture = document.querySelector('.profile-picture');
-            var file = event.target.files[0];
+        var profilePicture = document.querySelector('.profile-picture');
+        var file = event.target.files[0];
 
-            if (file) {
-                var reader = new FileReader();
+        if (file) {
+            var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    profilePicture.src = e.target.result;
-                };
+            reader.onload = function (e) {
+                profilePicture.src = e.target.result;
+            };
 
-                reader.readAsDataURL(file);
-            }
-        });
+            reader.readAsDataURL(file);
+        }
+    });
     </script>
 </body>
+
 
 </html>
