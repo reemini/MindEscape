@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family:'Times New Roman', Times, serif
+  font-family: 'Times New Roman', Times, serif
 }
 
 .container {
@@ -88,7 +88,7 @@ body {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: black;
   text-align: center;
 }
 
@@ -96,13 +96,13 @@ form {
   display: grid;
 }
 
-.input__group {
+.inputlogin_field {
   position: relative;
   margin: 1rem 0;
   display: flex;
 }
 
-.input__group1{
+.remembercheck {
   position: relative;
   margin: 0.5rem 0;
   display: flex;
@@ -110,9 +110,10 @@ form {
   margin-left: 16px;
 }
 
-.forgot-password{
+.forgot-password {
   margin-top: -7px;
 }
+
 .forgot-password a {
   color: rgb(161, 208, 224); /* Change color to match the "Remember me" color */
 }
@@ -126,9 +127,11 @@ form {
 .remember-me input[type="checkbox"] {
   margin-right: 5px; /* Adjust as needed */
 }
+
 .remember-me label {
   color: rgb(161, 208, 224); /* Change color to match the "Forgot password?" color */
 }
+
 .spacer {
   flex-grow: 1; /* Allow the spacer to grow and push "Forgot password?" to the right */
 }
@@ -159,7 +162,6 @@ form input:focus ~ label {
   font-size: 0.8rem;
 }
 
-
 form p {
   text-align: right;
   margin-bottom: 1.5rem;
@@ -188,58 +190,7 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--primary-color);
-}
-
-.divider {
-  position: relative;
-  isolation: isolate;
-  text-align: center;
-  width: 100%;
-  max-width: 200px;
-  margin: 2rem auto;
-}
-
-.divider::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--secondary-color);
-  z-index: -1;
-}
-
-.divider span {
-  padding: 0 1rem;
-  color: var(--secondary-color);
-  background-color: var(--white);
-}
-
-.google__login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  cursor: pointer;
-  margin-bottom: 2rem;
-}
-
-.google__login img {
-  max-width: 25px;
-}
-
-.google__login span {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-.google__login:hover span {
-  color: var(--primary-color);
+  background-color: #103c5c; /* Change background color on hover */
 }
 
 .create__account {
