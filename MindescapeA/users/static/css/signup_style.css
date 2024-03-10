@@ -30,28 +30,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 13rem; /* Adjust the value to set equal white spaces */
   background-color: var(--primary-color);
 }
 .container__left img {
     width: 100%;
-    max-width: 400px;
-    
+    max-width: 500px;
+    margin-top: 290px;
+    margin-bottom: 0;
 }
 
 .container__left h1 {
-    font-size: 1.75rem;
+    font-size: 2.4rem;
     font-weight: 500;
     color: var(--white);
     margin-top: 95px;
+    color: black;
+    margin-bottom: 10px;
 }
 
 .container__left p {
     max-width: 500px;
     font-size: 1.2rem;
     text-align: center;
-    color: var(--white);
-    margin-top: -90px;
+    color: black;
     margin-bottom: -90px;
 }
 
@@ -260,4 +261,15 @@ form button:hover {
 
 .ok-button:hover {
     background-color: #FFCD4E; /* or whatever color you want */
+}
+
+/* Add this CSS to style the password hide/show icons */
+#PasswordIcon,
+#ConfirmPasswordIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--primary-color);
 }

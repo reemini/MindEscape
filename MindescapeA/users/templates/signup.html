@@ -12,7 +12,7 @@
             Elevate your learning journey with innovative techniques
             revolutionizing your educational experience.
         </p>
-        <img src="{% static 'images/signup-page.png' %}" alt="this is the sign-up page" />
+        <img src="{% static 'images/signup-page.png' %}" alt="this is the sign-up page" style="width: 100%; max-width: 600px; margin-top: auto; margin-bottom: 0;" />
     </div>
 
     <div class="container__right">
@@ -28,18 +28,28 @@
                     <input type="text" required />
                     <label for="lastName">Last Name</label>
                 </div>
-                <div class="inputsignup_field">
-                    <input type="date" required />
-                    <label for="birthdate">Birth Date</label>
-                </div>
+
                 <div class="inputsignup_field">
                     <input type="text" required />
                     <label for="email">Email</label>
                 </div>
+
                 <div class="inputsignup_field">
-                    <input type="number" required />
-                    <label for="age">Age</label>
-                </div>
+                  <input type="password" id="passwordInput" required />
+                  <label for="password">Enter your password</label>
+                  <i class="fas fa-eye-slash" id="PasswordIcon" onclick="togglePasswordVisibility()"></i>
+              </div>
+              <div class="inputsignup_field">
+                  <input type="password" id="confirmPasswordInput" required />
+                  <label for="passwordConfirm">Re-Enter your password</label>
+                  <i class="fas fa-eye-slash" id="ConfirmPasswordIcon" onclick="toggleConfirmPasswordVisibility()"></i>
+              </div>
+
+              <div class="inputsignup_field">
+                <input type="date" required />
+                <label for="birthdate">Birth Date</label>
+            </div>
+            
                 <div class="inputsignup_field">
                     <select required>
                         <option value="" disabled selected>Select Role</option>
@@ -48,6 +58,7 @@
                     </select>
                     <label for="role">Role</label>
                 </div>
+                
 
                 <div class="inputsignup_field">
                     <p class="profile-label">Profile Image</p>
@@ -86,6 +97,21 @@
             passwordInput.type = "password";
             togglePasswordIcon.classList.remove("fa-eye");
             togglePasswordIcon.classList.add("fa-eye-slash");
+        }
+    }
+
+    function toggleConfirmPasswordVisibility() {
+        var confirmPasswordInput = document.getElementById("confirmPasswordInput");
+        var toggleConfirmPasswordIcon = document.getElementById("toggleConfirmPasswordIcon");
+
+        if (confirmPasswordInput.type === "password") {
+            confirmPasswordInput.type = "text";
+            toggleConfirmPasswordIcon.classList.remove("fa-eye-slash");
+            toggleConfirmPasswordIcon.classList.add("fa-eye");
+        } else {
+            confirmPasswordInput.type = "password";
+            toggleConfirmPasswordIcon.classList.remove("fa-eye");
+            toggleConfirmPasswordIcon.classList.add("fa-eye-slash");
         }
     }
 
