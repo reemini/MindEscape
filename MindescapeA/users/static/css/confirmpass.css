@@ -1,0 +1,148 @@
+/* confirmpass.css */
+
+:root {
+    --primary-color: #543786;
+    --secondary-color: #FEB737;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #D4DFF0;
+    margin: 0;
+    padding: 0;
+}
+
+.Bigcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Setpasswordleft-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Setpasswordleft-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.Setpasswordright-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentNewpassword {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Limit width on larger screens */
+    width: 100%; /* Responsive width */
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.Newpassinput {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the right distance according to your preference */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #543786;
+}
+
+.setpass,
+.resetpass {
+    padding: 0.75rem 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #717775;
+    line-height: 1.5; /* Adjust line height */
+}
+
+.setpass:focus,
+.resetpass:focus {
+    border-color:#A7B5FC;
+}
+
+.new-password,
+.confirm-password {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #717775;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.Newpassinput input:focus ~ .new-password,
+.Newpassinput input:valid ~ .new-password,
+.Newpassinput input:focus ~ .confirm-password,
+.Newpassinput input:valid ~ .confirm-password {
+    top: 0;
+    font-size: 0.8rem;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Responsive width */
+}
+
+button#setNewPassButton {
+    background-color: #543786; /* Updated color */
+}
+
+.back-to-login {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.back-to-login a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .Bigcontainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Setpasswordleft-container,
+    .Setpasswordright-container {
+        flex: none;
+        width: 100%;
+    }
+}

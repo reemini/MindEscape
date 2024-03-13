@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #D4DFF0;
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ body {
 }
 
 .contentv {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.329);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -51,37 +51,38 @@ h1 {
 
 .input__group2 {
     position: relative;
-    margin-bottom: 20px;
 }
 
+
 .resetEm {
+    padding: 0.75rem 0;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     outline: none;
-    transition: border-color 0.3s ease;
+    border: none;
+    border-bottom: 1px solid #717775;
+    line-height: 13px;
+    height: 2.5rem; 
 }
 
 .resetEm:focus {
-    border-color: var(--secondary-color);
+    border-color:#A7B5FC;
 }
 
 .label-email {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    color: rgba(84, 55, 134, 0.8);
+    top: 50%;
+    left: 0;
+    transform: translateY(-70%);
+    font-size: 0.9rem;
+    color: #717775;
     pointer-events: none;
-    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    transition: 0.3s;
 }
 
 .input__group2 input:focus ~ .label-email,
 .input__group2 input:valid ~ .label-email {
-    top: -15px;
-    left: 6px;
-    font-size: 12px;
-    color: rgba(84, 55, 134, 0.8);
+    top: 0;
+    font-size: 0.8rem;
 }
 
 .button-container {
@@ -89,7 +90,7 @@ h1 {
 }
 
 button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -97,6 +98,10 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+}
+
+button#okButton {
+    background-color: #543786; /* Updated color */
 }
 
 .back-to-login {
@@ -111,6 +116,46 @@ button {
 
 .back-to-login a:hover {
     text-decoration: underline;
+}
+
+/* Pop-up Styles */
+.forgetpopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.forgetpopup-content {
+    background-color: #ffffff95;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.forgetpopup-content p {
+    padding-top: 16px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 28px;
+    color: #FEB737; /* Updated color */
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: #8a5c07; /* Updated color */
 }
 
 /* Media Queries for Responsiveness */

@@ -1,0 +1,56 @@
+{% load static %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set New Password</title>
+<link rel="stylesheet" href="{% static 'css/confirmpass.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="Bigcontainer">
+    <div class="Setpasswordleft-container">
+        <img src="{% static 'images/setpassword-removebg.png' %}" alt="Set new Password Image">
+    </div>
+    <div class="Setpasswordright-container">
+        <div class="contentNewpassword">
+            <h1>Set New Password</h1>
+            <form id="setNewPassForm">
+                <div class="Newpassinput">
+                    <input class="setpass" type="password" id="newPassword" required /> 
+                    <label for="newPassword" class="new-password">New Password</label>
+                    <i class="toggle-password fas fa-eye-slash" data-target="newPassword"></i>
+                </div>
+                <div class="Newpassinput">
+                    <input class="resetpass" type="password" id="confirmPassword" required /> 
+                    <label for="confirmPassword" class="confirm-password">Confirm Password</label>
+                    <i class="toggle-password fas fa-eye-slash" data-target="confirmPassword"></i>
+                </div>
+                <button type="submit" id="setNewPassButton">Set New Password</button>
+            </form>
+            <button id="returnToLogin">Return to Login</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("returnToLogin").addEventListener("click", function() {
+        window.location.href = "{% url 'login' %}";
+    });
+
+    // Toggle password visibility
+    document.querySelectorAll('.toggle-password').forEach(function(icon) {
+        icon.addEventListener('click', function() {
+            var targetId = this.getAttribute('data-target');
+            var targetInput = document.getElementById(targetId);
+            if (targetInput.type === 'password') {
+                targetInput.type = 'text';
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+            } else {
+                targetInput.type = 'password';
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+            }
+        });
+    });
+</script>
+
+{% endblock %}

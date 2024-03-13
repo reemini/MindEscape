@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -98,9 +98,9 @@ form label {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
     font-size: 0.9rem;
-    color: var(--secondary-color);
+    color: #717775;
     pointer-events: none;
     transition: 0.3s;
 }
@@ -117,12 +117,6 @@ form input, form select {
 
 form input:not(:placeholder-shown) ~ label,
 form input:focus ~ label {
-    top: 0;
-    font-size: 0.8rem;
-}
-
-form select:not(:placeholder-shown) ~ label,
-form select:focus ~ label {
     top: 0;
     font-size: 0.8rem;
 }
@@ -206,7 +200,7 @@ form button:hover {
 /* Add this CSS to style the pop-up */
 .popup-overlay {
     position: fixed;
-    background-color: rgba(238, 238, 238, 0.219);
+    background-color: rgba(0, 0, 0, 0.5); /* Change background color to match forgetpass.css */
     top: 0;
     left: 0;
     width: 100%;
@@ -216,15 +210,14 @@ form button:hover {
     align-items: center;
 }
 
-
 .popup {
-    background-color: rgba(167, 181, 252, 0.90);
-    border: 2px solid #513886;
+    background-color: #ffffffb5;
+    border: 2px solid var(--secondary-color); /* Change border color to match forgetpass.css */
     width: 500px;
     max-width: 90%;
     height: auto;
     padding: 20px;
-    border-radius: 25px; /* Adjusted to match the border radius of the pop-up */
+    border-radius: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -237,30 +230,31 @@ form button:hover {
 }
 
 .popup p {
-    font-size: 1.2rem;
+    padding-top: 16px;
+    color: var(--text-dark); /* Change text color to match forgetpass.css */
 }
 
 .ok-button {
-    background-color: #FFCD4E;
-    color: black; /* Change text color to black */
+    background-color: #543786;
+    color: white; 
     border: none;
     padding: 10px 50px; /* Increase padding for a bigger button */
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
+
 
 .cancel-button {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    color: #FFCD4E;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    color: #543786;
     cursor: pointer;
-    font-size: 1.4rem; /* Increase font size for a bigger button */
-    padding: 4px 20px; /* Increase padding for a bigger button */
 }
 
-.ok-button:hover {
-    background-color: #FFCD4E; /* or whatever color you want */
+.cancel-button:hover {
+    color: #543786; /* Change hover color to match forgetpass.css */
 }
 
 /* Add this CSS to style the password hide/show icons */

@@ -1,7 +1,11 @@
 {% load static %}
 {% block content %}
 <title>Forget Password</title>
-<link rel="stylesheet" href="{% static 'css/forgetpass.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/forgetpass.css' %}">
 
 <div class="container1">
     <div class="left-container2">
@@ -11,16 +15,39 @@
         <div class="contentv">
             <h1>Forgot Password?</h1>
             <p>Please enter your email address to reset your password.</p>
-            <form>
+            <form id="resetForm">
                 <div class="input__group2">
-                    <input class="resetEm" type="email" required /> 
+                    <input class="resetEm" type="email" id="email" required /> 
                     <label for="email" class="label-email">Email</label>
                 </div>
-                <button type="submit">Reset Password</button>
+                <button type="submit" id="resetButton">Reset Password</button>
             </form>
             <p class="back-to-login">Remember your password? <a href="{% url 'login' %}">Login here</a></p>
         </div>
     </div>
 </div>
+
+<div class="forgetpopup" id="popup">
+    <div class="forgetpopup-content">
+        <span class="close-icon" id="close">&times;</span>
+        <p>We have sent an email to your email address 😉.<br><br> Please check your inbox 😊.</p>
+        <button id="okButton">OK</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("resetForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        document.getElementById("popup").style.display = "flex";
+    });
+
+    document.getElementById("close").addEventListener("click", function(){
+        document.getElementById("popup").style.display = "none";
+    });
+
+    document.getElementById("okButton").addEventListener("click", function(){
+        document.getElementById("popup").style.display = "none";
+    });
+</script>
 
     {% endblock %}

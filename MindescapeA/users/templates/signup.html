@@ -1,9 +1,13 @@
 {% block content %}
 {% load static %}
-
 <title>Registration page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{% static 'css/signup_style.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
 <div class="container">
     <div class="container__left">
@@ -70,7 +74,7 @@
                 <div class="popup-overlay" id="popup">
                     <div class="popup">
                         <h3>POP-UP Message</h3>
-                        <p><span style="font-weight: bold; font-size: 1.3rem;">THANK YOU 🤗🎧</span><br>We are Happy for having you here<br>we will review your account information and process your request to assign you for your role 🧑‍💻💫<br>we will notify you soon via email , Stay Tuned ..... ⏳</p>
+                        <p><span style="font-weight: bold; font-size: 1.3rem;">THANK YOU 🤗🎧</span><br><br>We are Happy for having you here<br>we will review your account information and process your request to assign you for your role 🧑‍💻💫<br>we will notify you soon via email , Stay Tuned ..... ⏳</p>
                         <button class="ok-button" onclick="closePopup()">Ok</button>
                         <span class="cancel-button" onclick="closePopup()">✖</span>
                     </div>

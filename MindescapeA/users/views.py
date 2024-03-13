@@ -16,6 +16,9 @@ def header(request):
 def forgetpass(request):
     return render(request, 'forgetpass.html')
 
+def confirmpass(request):
+    return render(request, 'confirmpass.html')
+
 def student(request):
     return render(request, 'student.html')
 

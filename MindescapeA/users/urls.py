@@ -25,6 +25,7 @@ urlpatterns = [
     path ('login',views.login, name = 'login'),
     path ('header',views.header, name = 'header'),
     path ('forgetpass',views.forgetpass, name = 'forgetpass'),
+    path ('confirmpass',views.confirmpass, name = 'confirmpass'),
     path ('teacher',views.teacher, name = 'teacher'),
     path ('student',views.student, name = 'student'),
     path ('editProfile',views.editProfile, name = 'editProfile'),
