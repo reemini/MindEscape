@@ -1,0 +1,152 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>cc</title>
+    <link rel="stylesheet" href="courses.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho%3A400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder%3A400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imprima%3A400" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/courses.css' %}" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row searchFilter">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="label-icon">Category</span> <span class="caret">&nbsp;</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="category_filters">
+                                <li>
+                                    <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio"><label for="all">All</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Design" value="Design"><label class="category-label" for="Design">Design</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="science" value="science"><label class="category-label" for="science">Science</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Programming" value="Programming"><label class="category-label" for="Programming">Programming</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Business" value="Business"><label class="category-label" for="Business">Business</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Support" value="Languages"><label class="category-label" for="Languages">Languages</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Personal Development" value="Personal Development"><label class="category-label" for="Personal Development">Personal Development</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radios" id="Art" value="Art"><label class="category-label" for="Art">Personal Development</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="searchBtn" type="button" class="btn btn-secondary btn-search">
+                            <span class="glyphicon glyphicon-search">&nbsp;</span> <span class="label-icon">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Courses Content -->
+<div class="course-section">
+    <!-- Course 1 -->
+    <div class="course-info" onclick="window.location.href='edit-profile.html'">
+        <!-- Course content -->
+        <img class="course-image" src="{% static 'images/img3.png' %}" alt="Course 1" />
+        <div class="course-title">ALRHAZ</div>
+        <div class="course-details">
+        <div class="category prog">science</div>
+    <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+    <div class="students"><span class="emoji">&#128100;</span> 500</div>
+
+    <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+    <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+    <div class="reviews">
+        ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+        <p>1K</p> <!-- Number of reviews -->
+    </div>
+        </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="course-info" onclick="window.location.href='edit-profile.html'">
+        <img class="course-image" src="{% static 'images/img3.png' %}" alt="Course 2" />
+        <div class="course-title">PRAKTIKA</div>
+        <div class="course-details">
+            <div class="category science">science</div>
+            <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+            <div class="students"><span class="emoji">&#128100;</span> 500</div>
+            <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+            <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+               <!-- Inside the course-details div -->
+           <div class="reviews">
+             ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+              <p>1K</p> <!-- Number of reviews -->
+           </div>    
+        </div>
+    </div>
+    <div class="course-info" onclick="window.location.href='edit-profile.html'">
+        <img class="course-image" src="{% static 'images/img3.png' %}" alt="Course 2" />
+        <div class="course-title">PRAKTIKA</div>
+        <div class="course-details">
+            <div class="category history">History</div>
+            <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+            <div class="students"><span class="emoji">&#128100;</span> 500</div>
+            <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+            <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+               <!-- Inside the course-details div -->
+           <div class="reviews">
+             ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+              <p>1K</p> <!-- Number of reviews -->
+           </div>    
+        </div>
+    </div>
+    
+    <div class="course-info" onclick="window.location.href='edit-profile.html'">
+        <img class="course-image" src="{% static 'images/img3.png' %}" alt="Course 2" />
+        <div class="course-title">PRAKTIKA</div>
+        <div class="course-details">
+           <!-- Inside the course-info div -->
+        <div class="category math">Math</div>
+
+        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+            <div class="students"><span class="emoji">&#128100;</span> 500</div>
+            <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+            <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+           <!-- Inside the course-details div -->
+       <div class="reviews">
+         ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+          <p>1K</p> <!-- Number of reviews -->
+       </div>
+        </div>
+    </div>
+
+
+    <!-- Add more courses as needed... -->
+    
+    
+
+</div>
+
+    </div>
+</body>
+
+</html>
