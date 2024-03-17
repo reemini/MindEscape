@@ -16,8 +16,7 @@
         <div class="search-bar">
             <input type="text" placeholder="Search...">
             <button>Search</button>
-            <a href="your-other-page.html" class="add-button">Add</a>
-        </div>
+            <button id="createCourseBtn">Add</button> <!-- Changed to a button -->        </div>
 
         <table>
             <thead>
@@ -61,6 +60,40 @@
         </div>
     </div>
 
+    <div id="createCourseModal" class="modal">
+
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 class="title-create-coures">Craete New User Account<i class="fa-solid fa-microphone-lines" style="color: #513886;"></i></h2>
+          <form action="/action_page.php">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your First Name..">
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your Last Name..">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email..">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your Age..">
+           
+  
+            <label for="role">Role:</label>
+            <select class="minimal">
+              <option value="edu">Educator</option>
+              <option value="stu">Student</option>
+              <option value="admin">Admin</option>
+            </select>
+            <br>
+            <label for="userimg">Profile Picture:</label>
+            <input type="file" id="userimg" name="userimg" accept="image/*">
+            <br>
+            <button type="submit" class="createCourseBtn">Create</button>
+          </form>
+        </div>
+  
+      </div>
     <script>
         // Function to close the popup
         function closePopup() {
@@ -90,6 +123,34 @@
 
         // Prevent the popup from closing when clicking inside it
         popup.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+      <script>
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('createCourseModal').style.display = 'none';
+        }
+
+        // Get the "Add" button and the modal element
+        const createCourseBtn = document.getElementById('createCourseBtn');
+        const createCourseModal = document.getElementById('createCourseModal');
+
+        // Attach click event listener to the "Add" button
+        createCourseBtn.addEventListener('click', () => {
+            // Show the modal when the button is clicked
+            createCourseModal.style.display = 'block';
+        });
+
+        // Close the modal when clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === createCourseModal) {
+                createCourseModal.style.display = 'none';
+            }
+        });
+
+        // Prevent the modal from closing when clicking inside it
+        createCourseModal.addEventListener('click', (event) => {
             event.stopPropagation();
         });
     </script>
