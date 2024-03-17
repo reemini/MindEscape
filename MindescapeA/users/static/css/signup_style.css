@@ -3,10 +3,6 @@
 :root {
     --primary-color: #A7B5FC;
     --secondary-color: #717775;
-    --text-dark: #333333;
-    --text-light: #767268;
-    --extra-light: #f3f4f6;
-    --white: #ffffff;
 }
 
 * {
@@ -25,19 +21,13 @@ body {
 }
 
 .container__left {
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
 }
-.container__left img {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 290px;
-    margin-bottom: 0;
-}
+
 
 .container__left h1 {
     font-size: 2.4rem;
@@ -89,14 +79,15 @@ form {
 
 .inputsignup_field {
     position: relative;
-    margin: 1rem 0;
+    margin: 0.5rem 0; /* Adjust margin to reduce spacing */
     display: flex;
     align-items: center;
 }
 
+
 form label {
     position: absolute;
-    top: 9%;
+    top: 3px; /* Adjust vertical position */
     left: 0;
     transform: translateY(-70%);
     font-size: 0.9rem;
@@ -107,21 +98,20 @@ form label {
 
 form input,
 form select {
-    padding: 0.75rem 0;
+    padding: 0.3rem 0.5rem 0.3rem 0;
     width: 100%;
     outline: none;
     border: none;
     border-bottom: 1px solid var(--secondary-color);
     line-height: 13px;
-    height: 2.5rem; /* Added height */
+    height: 2.5rem; 
 }
 
 form input:not(:placeholder-shown) ~ label,
 form input:focus ~ label {
-    top: 0;
+    top: 8px;
     font-size: 0.8rem;
 }
-
 
 form p {
     margin-bottom: 1.5rem;
@@ -143,7 +133,7 @@ form button {
     border-radius: 5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--white);
+    color: white;
     background-color: #543786;
     cursor: pointer;
     transition: 0.3s;
@@ -159,34 +149,25 @@ form button:hover {
     display: block;
     width: 100px;
     background: #543786;
-    color: var(--white); /* Set text color to white for better visibility */
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-    position: relative; /* Add position relative to the parent */
-    margin-top: 20px; /* Adjust the top margin */
+    position: relative; 
+    margin-top: 20px;
     margin-left: 30px;
 }
 
 .input1 {
-    position: absolute; /* Position the input button absolutely */
+    position: absolute; 
     opacity: 0; /* Hide the original input button */
     width: 100%; /* Match the width of the label */
     height: 100%; /* Match the height of the label */
     cursor: pointer;
 }
 
-@media (max-width: 788px) {
-    .container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .container__left,
-    .container__right {
-        min-height: 100vh;
-    }
-}
-
-#togglePasswordIcon {
+/* Add this CSS to style the password hide/show icons */
+#PasswordIcon,
+#ConfirmPasswordIcon {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -195,15 +176,16 @@ form button:hover {
     color: var(--primary-color);
 }
 
+
 .create__account {
-    text-align: center; /* Center the text horizontally */
-    margin-top: 20px; /* Add some top margin for spacing */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 /* Add this CSS to style the pop-up */
 .popup-overlay {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5); /* Change background color to match forgetpass.css */
+    background-color: rgba(0, 0, 0, 0.5); 
     top: 0;
     left: 0;
     width: 100%;
@@ -215,7 +197,7 @@ form button:hover {
 
 .popup {
     background-color: #ffffffb5;
-    border: 2px solid var(--secondary-color); /* Change border color to match forgetpass.css */
+    border: 2px solid var(--secondary-color); 
     width: 500px;
     max-width: 90%;
     height: auto;
@@ -229,19 +211,19 @@ form button:hover {
 .popup h3 {
     margin-bottom: 20px;
     text-align: center;
-    font-weight: normal; /* Remove bold font weight */
+    font-weight: normal;
 }
 
 .popup p {
     padding-top: 16px;
-    color: var(--text-dark); /* Change text color to match forgetpass.css */
+    color: var(--text-dark);
 }
 
 .ok-button {
     background-color: #543786;
     color: white; 
     border: none;
-    padding: 10px 50px; /* Increase padding for a bigger button */
+    padding: 10px 50px; 
     border-radius: 5px;
     cursor: pointer;
 }
@@ -256,16 +238,16 @@ form button:hover {
 }
 
 .cancel-button:hover {
-    color: #543786; /* Change hover color to match forgetpass.css */
+    color: #543786; 
 }
 
-/* Add this CSS to style the password hide/show icons */
-#PasswordIcon,
-#ConfirmPasswordIcon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: var(--primary-color);
+@media (max-width: 788px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container__left,
+    .container__right {
+        min-height: 100vh;
+    }
 }
