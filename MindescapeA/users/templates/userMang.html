@@ -63,33 +63,32 @@
     <div id="createCourseModal" class="modal">
 
         <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <h2 class="title-create-coures">Craete New User Account<i class="fa-solid fa-microphone-lines" style="color: #513886;"></i></h2>
+          <span class="close">&times;</span>
+          <h2 class="title-create-account">Craete New User Account<i class="fa-solid fa-microphone-lines" style="color: #D4E0F0;"></i></h2>
           <form action="/action_page.php">
             <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Enter your First Name..">
+            <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name..">
 
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Enter your Last Name..">
+            <label for="Lastname">Last Name:</label>
+            <input type="text" id="Lastname" name="Lastname" placeholder="Enter Your Last Name..">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your Email..">
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" placeholder="Enter Your Email..">
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your Age..">
-           
+            <label for="Age">Age:</label>
+            <input type="number" id="Age" name="Age" placeholder="Enter Your Age..">
   
-            <label for="role">Role:</label>
-            <select class="minimal">
-              <option value="edu">Educator</option>
-              <option value="stu">Student</option>
-              <option value="admin">Admin</option>
+            <label for="Role">Role:</label>
+            <select   class="minimal">
+              <option value="Eduactor">Eduactor</option>
+              <option value="student">Student</option>
+              <option value="Admin">Admin</option>
             </select>
             <br>
             <label for="userimg">Profile Picture:</label>
             <input type="file" id="userimg" name="userimg" accept="image/*">
             <br>
-            <button type="submit" class="createCourseBtn">Create</button>
+            <button type="submit" class="createUserBtn">Create</button>
           </form>
         </div>
   
@@ -127,32 +126,31 @@
         });
     </script>
       <script>
-        // Function to close the modal
-        function closeModal() {
-            document.getElementById('createCourseModal').style.display = 'none';
-        }
+       // Get the button that opens the modal
+var createCourseBtn = document.getElementById("createCourseBtn");
 
-        // Get the "Add" button and the modal element
-        const createCourseBtn = document.getElementById('createCourseBtn');
-        const createCourseModal = document.getElementById('createCourseModal');
+// Get the modal element
+var createCourseModal = document.getElementById("createCourseModal");
 
-        // Attach click event listener to the "Add" button
-        createCourseBtn.addEventListener('click', () => {
-            // Show the modal when the button is clicked
-            createCourseModal.style.display = 'block';
-        });
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-        // Close the modal when clicking outside of it
-        window.addEventListener('click', (event) => {
-            if (event.target === createCourseModal) {
-                createCourseModal.style.display = 'none';
-            }
-        });
+// When the user clicks the button, open the modal 
+createCourseBtn.onclick = function() {
+  createCourseModal.style.display = "block";
+}
 
-        // Prevent the modal from closing when clicking inside it
-        createCourseModal.addEventListener('click', (event) => {
-            event.stopPropagation();
-        });
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  createCourseModal.style.display = "none";
+}
+
+// When the user clicks outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == createCourseModal) {
+    createCourseModal.style.display = "none";
+  }
+}
     </script>
 </body>
 </html>
