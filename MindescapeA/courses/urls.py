@@ -24,7 +24,8 @@ urlpatterns = [
     path('courses/<int:course_id>/', views.course_detail, name='course_detail'),
     path('generated_course/', views.generated_course, name='generated_course'),
     path('courseinfo',views.courseinfo, name = 'courseinfo'),
-     path('courses',views.courses, name = 'courses'),
+    path('courses',views.courses, name = 'courses'),
+    path('firstPageOfCreateCourse',views.firstPageOfCreateCourse, name = 'firstPageOfCreateCourse'),
 
 ]
 

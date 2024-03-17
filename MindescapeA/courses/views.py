@@ -16,3 +16,6 @@ def courseinfo(request):
 
 def courses(request):
     return render(request,'courses.html')
+
+def firstPageOfCreateCourse(request):
+    return render(request,'firstPageOfCreateCourse.html')
