@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{% static 'css/Admin.css' %}" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="title">Admin Panel</div>
+            <div class="manage-title">Manage</div>
+            <div class="purple-box">
+                <h2>Educator Requests</h2>
+                <p>1</p>
+                <!-- You would fetch this data from the database and generate HTML dynamically using php-->
+                <button>Review Requests</button>
+            </div>
+            <div class="purple-box">
+                <h2>AI Content Requests</h2>
+                <p>23</p>
+                <button>Review Requests</button>
+            </div>
+            <div class="purple-box">
+                <h2>Total Users</h2>
+                <p>443</p>
+                <button>Manage Users</button>
+            </div>
+        </div>
+        <!-- Add the title above the grey box -->
+        <div class="grey-box">
+            <div class="grey-box-title">Reminders</div>
+            <!-- Placeholder for dynamic reminder items -->
+            <!-- You would fetch this data from the database and generate HTML dynamically -->
+            <div class="reminder">
+                <h3>Meeting at 10:00 AM</h3>
+                <p>2 hours ago</p>
+            </div>
+            <div class="reminder">
+                <h3>Submit report by 3:00 PM</h3>
+                <p>Yesterday</p>
+            </div>
+            <div class="reminder">
+                <h3>Call client at 2:30 PM</h3>
+                <p>30 minutes ago</p>
+            </div>
+            <!-- Add more reminders dynamically from the database -->
+            <!-- Placeholder for dynamic reminder items -->
+            <!-- You would fetch this data from the database and generate HTML dynamically -->
+          <!--  <?php
+                // Assuming $reminders is an array containing reminder data fetched from the database
+                foreach ($reminders as $reminder) {
+            ?>
+                <div class="reminder">
+                    <h3><?php echo $reminder['title']; ?></h3>
+                    <p><?php echo $reminder['time_ago']; ?></p>
+                </div>
+            <?php } ?>-->
+        </div>
+    </div>
+</body>
+</html>
