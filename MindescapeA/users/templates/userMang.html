@@ -1,0 +1,97 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Users Accounts</title>
+    <link rel="stylesheet" href="{% static 'css/userMang.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Manage Users Accounts </h1>
+        
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+            <a href="your-other-page.html" class="add-button">Add</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- You would fetch data from the database and generate rows dynamically -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>ee</td>
+                    <td class="action-icons">
+                        <!-- Replace these with actual emojis -->
+                        <a href="#" class="deny">❌</a> <!-- Deny -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>ee</td>
+                    <td class="action-icons">
+                        <!-- Replace these with actual emojis -->
+                        <a href="#" class="deny">❌</a> <!-- Deny -->
+                     
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup for rejection reason -->
+    <div id="popup" class="popup">
+        <span class="popup-close" onclick="closePopup()">&#10006;</span>
+        <div class="popup-title">Delete Account</div>
+        <div class="popup-box">
+            <p class="popup-message" style="color: #EA7D7D;">Are you sure you want to delete the account?</p>
+            <button class="popup-delete-button">Delete</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Get the deny action icons
+        const denyIcons = document.querySelectorAll('.deny');
+
+        // Get the popup element
+        const popup = document.getElementById('popup');
+
+        // Attach click event listener to each deny icon
+        denyIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Display the popup when the icon is clicked
+                popup.style.display = 'block';
+            });
+        });
+
+        // Close the popup when clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // Prevent the popup from closing when clicking inside it
+        popup.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
