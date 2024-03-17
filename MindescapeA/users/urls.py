@@ -29,5 +29,12 @@ urlpatterns = [
     path ('teacher',views.teacher, name = 'teacher'),
     path ('student',views.student, name = 'student'),
     path ('editProfile',views.editProfile, name = 'editProfile'),
+    path('AdminPanel',views.AdminPanel, name = 'AdminPanel'),
+    path('AIrequest',views.AIrequest, name = 'AIrequest'),
+    path('EduRequest',views.EduRequest, name = 'EduRequest'),
+    path('userMang',views.userMang, name = 'userMang'),
+
+
+
 
 ]

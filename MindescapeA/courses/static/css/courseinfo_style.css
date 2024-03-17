@@ -6,30 +6,113 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Remove bullet points */
+.no-bullet {
+    list-style-type: none;
+}
+
 .bigbox {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.first-section {
+/* Updated CSS for List Group */
+.list-group {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px; /* Adjust the gap between items */
+    position: relative; 
 }
 
-.first-section img {
-    max-width: 50%;
+.list-group p:hover {
+    color: #543786;
+    box-shadow: 5px 5px 20px rgba(122, 120, 120, 0.4); 
 }
 
-.infoget-box,
-.course-details {
-    flex-basis: 50%;
+.list-group .line {
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.252);
 }
 
-.skills,
-.more-details {
-    width: 100%;
+.list-group p {
+    margin: 0;
+    cursor: pointer; 
+    font-size: 18px; 
+    font-weight: bold;
+}
+
+/*what will you get part*/
+.informationget-box {
+    flex-basis: calc(50% - 20px); /* Adjusted width */
+    border: 1px solid #fff; /* White border */
+    background-color: white; /* Changed background color */
+    padding: 36px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 400px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 10px; /* Adjusted margin-right */
+}
+
+.course-details-container {
+    flex-basis: calc(50% - 20px); /* Adjusted width */
+    border: 1px solid #fff; /* White border */
+    background-color: white; /* Changed background color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 400px;
+    margin-left: 830px;
+    margin-top: -312px;
+}
+
+.course-details hr {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.image-and-info {
+    display: flex;
+    align-items: flex-start; /* Align vertically */
+}
+
+.image-and-info .about-image {
+    max-width: 30%;
     margin-top: 20px;
+}
+
+/* CSS for skills */
+.skills {
+    margin-bottom: 20px; /* Add some space below the skills section */
+}
+
+.skills ul {
+    padding: 0; /* Remove default padding */
+    display: flex; /* Display list items horizontally */
+    gap: 10px; /* Adjust the gap between list items */
+}
+
+.skills ul li {
+    position: relative; /* Position relative for the pseudo-element */
+    padding: 10px 40px; /* Padding for the list items */
+    margin-bottom: 8px; /* Margin between list items */
+    background-color: #b2c9f1; /* Background color */
+    color: #555; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    color: #555;
+    list-style-type: none; /* Remove bullet points */
+}
+
+.more-details .link {
+    font-size: 28px; /* Adjust the font size to make the icon bigger */
+    margin-left: 40px;
+    color: #083F9B;
 }
 
 /* Header Styles */
@@ -264,4 +347,3 @@ header {
 .Noti-button:active {
     transform: scale(0.8);
 }
-

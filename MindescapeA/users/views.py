@@ -27,3 +27,15 @@ def teacher(request):
 
 def editProfile(request):
     return render(request, 'edit-profile.html')
+
+def AdminPanel(request):
+    return render(request,'AdminPanel.html')
+
+def AIrequest(request):
+    return render(request,'AI-Request.html')
+
+def EduRequest(request):
+    return render(request,'Edu-Request.html')
+
+def userMang(request):
+    return render(request,'userMang.html')

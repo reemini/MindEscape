@@ -1,67 +1,51 @@
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Course Info</title>
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-bVVah+xR6xxaWB+058RtJsL5vFsd/e5PPSd6OVvJcfKehXzKvm2mT2tRPmPb6T35" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/courseinfo_style.css' %}">
-<header>
-    <!-- Logo -->
-    <div class="logo">
-        <img src="{% static 'images/logo-remove.png' %}" alt="logo">
-    </div>
-    <!-- New Button -->
-    <button class="Explorebutton">
-        Explore Now!
-        <svg fill="currentColor" viewBox="0 0 24 24" class="Goicon">
-            <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
-        </svg>
-    </button>
-    <!-- Search bar -->
-    <div class="InputContainer">
-        <input type="text" name="text" class="input" id="input" placeholder="Search">
-        <label for="input" class="labelforsearch">
-            <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
-        </label>
-        <div class="border"></div>
-        <button class="micButton"><svg viewBox="0 0 384 512" class="micIcon"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"></path></svg></button>
-    </div>
-    <!-- Notification icon -->
-    <button class="Noti-button">
-        <svg viewBox="0 0 448 512" class="bell"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
-    </button>
-    <!-- Profile button -->
-    <button class="profile-button"><i class="fas fa-user"></i></button>
-    <!-- Home button -->
-    <button class="home-button"><i class="fas fa-home"></i></button>
-</header>
+<title>course information </title>
 
 <div class="bigbox">
     <div class="TheLists">
         <!-- First Section -->
-        <div class="first-section">
-            <img src="{% static 'images/courseinfo.png' %}" alt="About Image">
-            <div class="infoget-box">
+        <div class="list-group">
+            <p class="about">About </p>
+            <p class="outcomes">Outcomes</p>
+            <p class="courses">Courses</p>
+            <div class="line"></div>
+        </div>
+        <div class="image-and-info">
+            <img src="{% static 'images/courseinfo.png' %}" alt="About Image" class="about-image">
+            
+            <div class="informationget-box">
                 <h3>What Will You Get?</h3>
-                <ul>
-                    <li>First Thing</li>
-                    <li>Second Thing</li>
-                    <li>Third Thing</li>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p>Id interdum dui mollis . Suspendisse nulla :</p>
+                <ul class="no-bullet">
+                    <li>☑️ First Thing</li>
+                    <li>☑️ Second Thing</li>
+                    <li>☑️ Third Thing</li>
                 </ul>
             </div>
+        </div>
+        <div class="course-details-container">
             <div class="course-details">
                 <h3>Course Details</h3>
                 <p>Python Language - 5 course series</p>
                 <p>Get in-depth knowledge of a subject</p>
-                <p>Rating: 4.8</p>
+                <p>Rating: 4.8 
+                    <!-- Updated SVG code with width and height attributes -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="12" height="12">
+                        <path fill="#1b25b6" d="M288 376.4l.1-.1 26.4 14.1 85.2 45.5-16.5-97.6-4.8-28.7 20.7-20.5 70.1-69.3-96.1-14.2-29.3-4.3-12.9-26.6L288.1 86.9l-.1 .3V376.4zm175.1 98.3c2 12-3 24.2-12.9 31.3s-23 8-33.8 2.3L288.1 439.8 159.8 508.3C149 514 135.9 513.1 126 506s-14.9-19.3-12.9-31.3L137.8 329 33.6 225.9c-8.6-8.5-11.7-21.2-7.9-32.7s13.7-19.9 25.7-21.7L195 150.3 259.4 18c5.4-11 16.5-18 28.8-18s23.4 7 28.8 18l64.3 132.3 143.6 21.2c12 1.8 22 10.2 25.7 21.7s.7 24.2-7.9 32.7L438.5 329l24.6 145.7z"/>
+                    </svg>
+                </p>
                 <p>Level: Beginner</p>
                 <p>Duration: 2 months, 10 hours a week</p>
                 <p>Schedule: Flexible</p>
+                <hr> <!-- Added line 2 -->
             </div>
         </div>
+        
         <!-- Second Section -->
         <div class="second-section">
             <div class="skills">
@@ -74,11 +58,11 @@
             </div>
             <div class="more-details">
                 <h2>More Details</h2>
-                <p>More details: <a href="https://www.linkedin.com/in/your-profile-link" class="link"><i class="fab fa-linkedin"></i> </a></p>
+                <a href="https://www.linkedin.com/in/your-profile-link" class="link"><i class="fab fa-linkedin"></i> </a>
             </div>
         </div>
     </div>
 </div>
-    {% endblock %}
 
 
+{% endblock %}
