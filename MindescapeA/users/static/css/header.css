@@ -167,7 +167,7 @@ header {
   height: 50px; /* Match the size of the notification icon */
 }
 
-/*  Explore all button styling */
+/* Explore all button styling */
 .Explorebutton {
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -236,3 +236,5 @@ header {
     left: 100%;
   }
 }
+
+/* Rest of your existing CSS styles... */
