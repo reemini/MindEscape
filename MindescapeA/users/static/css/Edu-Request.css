@@ -1,22 +1,28 @@
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
 .container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
+    max-width: 900px; /* Added max-width for responsiveness */
+    width: 100%; /* Added width for responsiveness */
+    margin: auto; /* Center the container horizontally */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements horizontally */
+    margin-top: 70px; /* Add margin to push the container down */
+}
+
+.title {
+    margin-top: 20px; /* Add margin to push title slightly lower */
+    margin-bottom: 20px; /* Add margin to separate title from other content */
+    text-align: center; /* Center the title text */
+}
+
+.search-bar {
+    margin-bottom: 20px; /* Add margin to separate search bar from other content */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Make the search bar full width */
 }
 
 .title {
@@ -112,14 +118,7 @@ tr:hover {
     color: #7CB8C0;
 }
 
-/* Search bar */
-.search-bar {
-    text-align: right;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: flex-end; /* Align items to the end */
-}
+
 
 .search-bar input[type="text"] {
     flex: 1;
