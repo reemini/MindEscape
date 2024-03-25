@@ -121,42 +121,64 @@
     <section class="course">
         <h2>Top <span>3</span> Courses</h2>
         <p>Mindscape Academy offers a diverse range of courses tailored to expand your mind and skills. Here are the top three courses</p>
-        <div class="course-box">
-            <div class="courses">
-                <img src="{% static 'images/img1.jpeg' %}" alt="course-image">
-                <div class="details">
-                    <h3>Java Beginners Course </h3>
-                </div>
-                    <div class="more-details">
-                        <h6>210 Students</h6>
-                    <h6>13 Classes</h6>
-                    <h6><i class="fa-regular fa-star" style="color: #543786;"></i>9524</h6>
-                    </div>
+        <div class="course-section">
+            <!-- Course 1 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <!-- Course content -->
+                <img class="course-image" src="{% static 'images/img1.jpeg' %}" alt="Course 1" /> 
+                <div class="course-title">ALRHAZ</div>
+                <div class="course-details">
+                <div class="category prog">science</div>
+            <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+            <div class="students"><span class="emoji">&#128100;</span> 500</div>
+        
+            <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+            <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+            <div class="reviews">
+                ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                <p>1K</p> <!-- Number of reviews -->
             </div>
-
-            <div class="courses">
-                <img src="{% static 'images/img2.jpeg' %}" alt="course-image">
-                <div class="details">
-                    <h3>Java Beginners Course </h3>
-                </div>
-                    <div class="more-details">
-                        <h6>210 Students</h6>
-                    <h6>13 Classes</h6>
-                    <h6><i class="fa-regular fa-star" style="color: #543786;"></i>9524</h6>
-                    </div>
-            </div>
-
-            <div class="courses">
-                <img src="{% static 'images/img3.jpeg' %}" alt="course-image">
-                <div class="details">
-                    <h3>Java Beginners Course </h3>
-                </div>
-                <div class="more-details">
-                    <h6>210 Students</h6>
-                <h6>13 Classes</h6>
-                <h6><i class="fa-regular fa-star" style="color: #543786;"></i>9524</h6>
                 </div>
             </div>
+        
+            <!-- Course 2 -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/img2.jpeg' %}" alt="Course 2" />
+                <div class="course-title">PRAKTIKA</div>
+                <div class="course-details">
+                    <div class="category science">science</div>
+                    <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                    <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                    <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                    <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                       <!-- Inside the course-details div -->
+                   <div class="reviews">
+                     ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                      <p>1K</p> <!-- Number of reviews -->
+                   </div>    
+                </div>
+            </div>
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image" src="{% static 'images/img3.jpeg' %}" alt="Course 2" />
+                <div class="course-title">PRAKTIKA</div>
+                <div class="course-details">
+                    <div class="category history">History</div>
+                    <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                    <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                    <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                    <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                       <!-- Inside the course-details div -->
+                   <div class="reviews">
+                     ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                      <p>1K</p> <!-- Number of reviews -->
+                   </div>    
+                </div>
+            </div>
+            
+        
+            <!-- Add more courses as needed... -->
+            
+    
         </div>
     </section>
     <!-- top 3 courses section end -->
