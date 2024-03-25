@@ -9,21 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Student Profile</title>
+    {% load static %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho%3A400" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder%3A400" />
-    <link rel="stylesheet" href="page-1/styles/student-profile.css" />
     <link rel="stylesheet" href="{% static 'css/student.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
     
-<!-- hfhggit -->
-
 <body>
-    <!-- Header -->
+   
     <div class="header">
         <div class="logo-container">
-            <img class="logo" src="{% static 'images/image-12.png' %}"
+            <img class="logo" src="C:\Users\YOGA\Downloads\Export_HTML_20240210165108\page-1\assets\image-12.png"
                 alt="Mindscape Academy Logo" />
             <span class="mindscape-academy">Mindscape Academy</span>
         </div>
@@ -43,24 +43,28 @@
     <div class="main-content">
         <!-- Student Profile Info -->
         <div class="student-profile">
-            <img class="student-avatar"
-                src="{% static 'images/rectangle-16-hiD.png' %}"
-                alt="Student Avatar" />
+            <img class="student-avatar"  src="{% static 'images/rectangle-16-hiD.png' %}" alt="Student Avatar" id="profileImage" />
+           
             <div class="student-details">
                 <p class="student-name">Mohammed Ahmed</p>
                 <div class="student-role">Software Engineer</div>
-                <div class="purple-box">
+                
                     <p class="role">Student</p>
-                </div>
+                
                 <div class="student-info">
                     <p class="student-email">A3Mohammed@gmail.com</p>
                     <hr />
                     <p class="student-courses">Registered Courses: 2</p>
                     <div class="purple-box edit-profile" onclick="window.location.href='edit-profile.html'">
-                        <p class="role">Edit Profile</p>
+                        <p class="purple-box edit-profile" >Edit Profile</p>
                     </div>
                 </div>
             </div>
+             <div id="imageModal" class="modal">
+            <span class="close" id="closeModal">&times;</span>
+            <img class="modal-content"     src="{% static 'images/rectangle-16-hiD.png' %}"
+            alt="Student Avatar" id="modalImage">
+        </div>
         </div>
 
         <!-- Courses Content -->
@@ -69,37 +73,64 @@
             <!-- Course 1 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
                 <img class="course-image"
-                    src="{% static 'images/rectangle-12-e2R.png' %}"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
                     alt="Course 1" />
                 <div class="course-title">Course 1</div>
                 <div class="course-details">
                     <p>100 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
                         <p>85%</p>
                     </div>
                     <p>5 Classes</p>
                 </div>
                 <div class="progress-bar"></div>
             </div>
-
-            <!-- Course 2 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
                 <img class="course-image"
-                    src="{% static 'images/rectangle-12-e2R.png' %}"
-                    alt="Course 2" />
-                <div class="course-title">Course 2</div>
+                src="{% static 'images/rectangle-16-hiD.png' %}"
+                    alt="Course 1" />
+                <div class="course-title">Course 1</div>
                 <div class="course-details">
-                    <p>150 Students</p>
+                    <p>100 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>92%</p>
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
+                        <p>85%</p>
                     </div>
-                    <p>8 Classes</p>
+                    <p>5 Classes</p>
                 </div>
                 <div class="progress-bar"></div>
             </div>
-            <!-- Add more courses as needed... -->
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
+                    alt="Course 1" />
+                <div class="course-title">Course 1</div>
+                <div class="course-details">
+                    <p>100 Students</p>
+                    <div class="reviews">
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
+                        <p>85%</p>
+                    </div>
+                    <p>5 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                <img class="course-image"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
+                    alt="Course 1" />
+                <div class="course-title">Course 1</div>
+                <div class="course-details">
+                    <p>100 Students</p>
+                    <div class="reviews">
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
+                        <p>85%</p>
+                    </div>
+                    <p>5 Classes</p>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
         </div>
 
         <!-- Auto Generated Courses Section -->
@@ -108,29 +139,30 @@
             <!-- Auto-Generated Course 1 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
                 <img class="course-image"
-                    src="{% static 'images/rectangle-12-e2R.png' %}"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
                     alt="Auto Course 1" />
                 <div class="course-title">Auto Course 1</div>
                 <div class="course-details">
                     <p>50 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
                         <p>78%</p>
                     </div>
-                    <p>3 Classes</p>
+                    <p> Classes</p>
                 </div>
                 <div class="progress-bar"></div>
             </div>
 
             <!-- Auto-Generated Course 2 -->
             <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-12-e2R.png' %}
+                <img class="course-image"
+                src="{% static 'images/rectangle-16-hiD.png' %}"
                     alt="Auto Course 2" />
                 <div class="course-title">Auto Course 2</div>
                 <div class="course-details">
                     <p>80 Students</p>
                     <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
+                        <img src="./assets/eosstaroutlined-FAV.png" alt="Stars" />
                         <p>94%</p>
                     </div>
                     <p>5 Classes</p>
@@ -141,7 +173,32 @@
         </div>
     </div>
 
-   
+    <script>
+      // Add this script at the end of your body tag or in a separate JS file.
+
+const profileImage = document.getElementById("profileImage");
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeModal = document.getElementById("closeModal");
+
+profileImage.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImage.src = profileImage.src;
+});
+
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+    
+    </script>
 </body>
 
 </html>
+
