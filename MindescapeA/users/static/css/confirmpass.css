@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #D4DFF0;
+    background-color: rgba(84, 55, 134, 1);
     margin: 0;
     padding: 0;
 }
@@ -23,11 +23,14 @@ body {
 .Setpasswordleft-container {
     flex: 1;
     padding: 20px;
+
 }
 
 .Setpasswordleft-container img {
     width: 100%;
     height: auto;
+    max-width: 700px;
+    margin-left: 25%;
 }
 
 .Setpasswordright-container {
@@ -35,11 +38,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 13%;
+    border-radius: 5px;
 }
 
 .contentNewpassword {
     background-color: rgba(255, 255, 255, 0.329);
-    padding: 80px; /* Adjusted padding to make the form larger */
+    padding: 80px;
+    /* Adjusted padding to make the form larger */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -47,19 +53,23 @@ body {
 
 h1 {
     color: var(--primary-color);
-    font-size: 2rem; /* Adjusted font size for the title */
-    margin-bottom: 20px; /* Added margin for spacing */
+    font-size: 2rem;
+    /* Adjusted font size for the title */
+    margin-bottom: 20px;
+    /* Added margin for spacing */
 }
 
 .Newpassinput {
     position: relative;
-    margin-bottom: 30px; /* Increased margin for spacing */
+    margin-bottom: 30px;
+    /* Increased margin for spacing */
 }
 
 .toggle-password {
     position: absolute;
     top: 50%;
-    right: 10px; /* Adjust the right distance according to your preference */
+    right: 10px;
+    /* Adjust the right distance according to your preference */
     transform: translateY(-50%);
     cursor: pointer;
     color: #543786;
@@ -67,13 +77,15 @@ h1 {
 
 .setpass,
 .resetpass {
-    padding: 15px 20px; /* Adjusted padding for input fields */
+    padding: 15px 20px;
+    /* Adjusted padding for input fields */
     width: 100%;
     outline: none;
     border: none;
     border-bottom: 1px solid #717775;
     height: 2.5rem;
-    font-size: 1rem; /* Adjusted font size for input fields */
+    font-size: 1rem;
+    /* Adjusted font size for input fields */
 }
 
 .setpass:focus,
@@ -84,19 +96,19 @@ h1 {
 .new-password,
 .confirm-password {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 5px;
-    transform: translateY(-50%);
-    font-size: 0.9rem;
-    color: #717775;
+    transform: translateY(-110%);
+    font-size: 1rem;
+    color: #FEB737;
     pointer-events: none;
     transition: 0.3s;
 }
 
-.Newpassinput input:focus ~ .new-password,
-.Newpassinput input:valid ~ .new-password,
-.Newpassinput input:focus ~ .confirm-password,
-.Newpassinput input:valid ~ .confirm-password {
+.Newpassinput input:focus~.new-password,
+.Newpassinput input:valid~.new-password,
+.Newpassinput input:focus~.confirm-password,
+.Newpassinput input:valid~.confirm-password {
     top: 0;
     font-size: 0.8rem;
 }
@@ -105,17 +117,21 @@ button {
     background-color: var(--secondary-color);
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Adjusted padding for button */
+    padding: 15px 30px;
+    /* Adjusted padding for button */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1rem; /* Adjusted font size for button */
+    font-size: 1rem;
+    /* Adjusted font size for button */
 }
 
 button#setNewPassButton {
-    background-color: #543786; /* Updated color */
+    background-color: #543786;
+    /* Updated color */
 }
 
 .back-to-login {
-    display: none; /* Remove the 'Return to Login' button */
+    display: none;
+    /* Remove the 'Return to Login' button */
 }

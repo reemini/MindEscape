@@ -1,194 +1,167 @@
-
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Users Accounts</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/userMang.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Users Accounts</title>
+  <link rel="stylesheet" href="{% static 'css/userMang.css' %}" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-    
-    <header>
-        <!-- Logo -->
- <div class="logo">
-   <img src="{% static 'images/logo-remove.png' %}" alt="logo">
- </div>
-<!-- New Button -->
-<button class="Explorebutton">
- Explore Now!
- <svg fill="currentColor" viewBox="0 0 24 24" class="Goicon">
-   <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
- </svg>
-</button>
- <!-- Search bar -->
- <div class="InputContainer">
-   <input type="text" name="text" class="input" id="input" placeholder="Search">
-   <label for="input" class="labelforsearch">
-     <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
-   </label>
-   <div class="border"></div>
-   <button class="micButton"><svg viewBox="0 0 384 512" class="micIcon"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"></path></svg></button>
- </div>
- <!-- Notification icon -->
- <button class="Noti-button">
-   <svg viewBox="0 0 448 512" class="bell"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
- </button>
- <!-- Profile button -->
- <button class="profile-button"><i class="fas fa-user"></i></button>
- <!-- Home button -->
- <button class="home-button"><i class="fas fa-home"></i></button>
-   </header>
 
+  <div class="container">
 
-    <div class="container">
-        
-        <h1 class="title">Manage Users Accounts </h1>
-        
-        <!-- Search bar -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-            <button id="createCourseBtn">Add</button> <!-- Changed to a button -->        </div>
+    <h1 class="title">Manage Users Accounts </h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- You would fetch data from the database and generate rows dynamically -->
-                <tr>
-                    <td>John Doe</td>
-                    <td>ee</td>
-                    <td class="action-icons">
-                        <!-- Replace these with actual emojis -->
-                        <a href="#" class="deny">❌</a> <!-- Deny -->
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>ee</td>
-                    <td class="action-icons">
-                        <!-- Replace these with actual emojis -->
-                        <a href="#" class="deny">❌</a> <!-- Deny -->
-                     
-                    </td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
-        </table>
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+      <button id="createCourseBtn">Add</button> <!-- Changed to a button -->
     </div>
 
-    <!-- Popup for rejection reason -->
-    <div id="popup" class="popup">
-        <span class="popup-close" onclick="closePopup()">&#10006;</span>
-        <div class="popup-title">Delete Account</div>
-        <div class="popup-box">
-            <p class="popup-message" style="color: #EA7D7D;">Are you sure you want to delete the account?</p>
-            <button class="popup-delete-button">Delete</button>
-        </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- You would fetch data from the database and generate rows dynamically -->
+        <tr>
+          <td>John Doe</td>
+          <td>ee</td>
+          <td class="action-icons">
+            <!-- Replace these with actual emojis -->
+            <a href="#" class="deny">❌</a> <!-- Deny -->
+          </td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>ee</td>
+          <td class="action-icons">
+            <!-- Replace these with actual emojis -->
+            <a href="#" class="deny">❌</a> <!-- Deny -->
+
+          </td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Popup for rejection reason -->
+  <div id="popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&#10006;</span>
+    <div class="popup-title">Delete Account</div>
+    <div class="popup-box">
+      <p class="popup-message" style="color: #EA7D7D;">Are you sure you want to delete the account?</p>
+      <button class="popup-delete-button">Delete</button>
+    </div>
+  </div>
+
+  <div id="createCourseModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="title-create-account">Craete New User Account<i class="fa-solid fa-microphone-lines"
+          style="color: #D4E0F0;"></i></h2>
+      <form action="/action_page.php">
+        <label class="label-userMang" for="firstname">First Name:</label>
+        <input class="fname" type="text" id="firstname" name="firstname" placeholder="Enter Your First Name..">
+
+        <label class="label-userMang" for="Lastname">Last Name:</label>
+        <input class="Lname" type="text" id="Lastname" name="Lastname" placeholder="Enter Your Last Name..">
+
+        <label class="label-userMang" for="Email">Email:</label>
+        <input class="email" type="email" id="Email" name="Email" placeholder="Enter Your Email..">
+
+        <label class="label-userMang" for="Age">Age:</label>
+        <input class="number" type="number" id="Age" name="Age" placeholder="Enter Your Age..">
+
+        <label class="label-userMang" for="Role">Role:</label>
+        <select class="minimal">
+          <option value="Eduactor">Eduactor</option>
+          <option value="student">Student</option>
+          <option value="Admin">Admin</option>
+        </select>
+        <br>
+        <label class="label-userMang" for="userimg">Profile Picture:</label>
+        <input class="file" type="file" id="userimg" name="userimg" accept="image/*">
+        <br>
+        <button type="submit" class="createUserBtn">Create</button>
+      </form>
     </div>
 
-    <div id="createCourseModal" class="modal">
+  </div>
+  <script>
+    // Function to close the popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
 
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 class="title-create-account">Craete New User Account<i class="fa-solid fa-microphone-lines" style="color: #D4E0F0;"></i></h2>
-          <form action="/action_page.php">
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name..">
+    // Get the deny action icons
+    const denyIcons = document.querySelectorAll('.deny');
 
-            <label for="Lastname">Last Name:</label>
-            <input type="text" id="Lastname" name="Lastname" placeholder="Enter Your Last Name..">
+    // Get the popup element
+    const popup = document.getElementById('popup');
 
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" name="Email" placeholder="Enter Your Email..">
+    // Attach click event listener to each deny icon
+    denyIcons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        // Display the popup when the icon is clicked
+        popup.style.display = 'block';
+      });
+    });
 
-            <label for="Age">Age:</label>
-            <input type="number" id="Age" name="Age" placeholder="Enter Your Age..">
-  
-            <label for="Role">Role:</label>
-            <select   class="minimal">
-              <option value="Eduactor">Eduactor</option>
-              <option value="student">Student</option>
-              <option value="Admin">Admin</option>
-            </select>
-            <br>
-            <label for="userimg">Profile Picture:</label>
-            <input type="file" id="userimg" name="userimg" accept="image/*">
-            <br>
-            <button type="submit" class="createUserBtn">Create</button>
-          </form>
-        </div>
-  
-      </div>
-    <script>
-        // Function to close the popup
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
+    // Close the popup when clicking outside of it
+    window.addEventListener('click', (event) => {
+      if (event.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
 
-        // Get the deny action icons
-        const denyIcons = document.querySelectorAll('.deny');
+    // Prevent the popup from closing when clicking inside it
+    popup.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  </script>
+  <script>
+    // Get the button that opens the modal
+    var createCourseBtn = document.getElementById("createCourseBtn");
 
-        // Get the popup element
-        const popup = document.getElementById('popup');
+    // Get the modal element
+    var createCourseModal = document.getElementById("createCourseModal");
 
-        // Attach click event listener to each deny icon
-        denyIcons.forEach(icon => {
-            icon.addEventListener('click', () => {
-                // Display the popup when the icon is clicked
-                popup.style.display = 'block';
-            });
-        });
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-        // Close the popup when clicking outside of it
-        window.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
+    // When the user clicks the button, open the modal 
+    createCourseBtn.onclick = function () {
+      createCourseModal.style.display = "block";
+    }
 
-        // Prevent the popup from closing when clicking inside it
-        popup.addEventListener('click', (event) => {
-            event.stopPropagation();
-        });
-    </script>
-      <script>
-       // Get the button that opens the modal
-var createCourseBtn = document.getElementById("createCourseBtn");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      createCourseModal.style.display = "none";
+    }
 
-// Get the modal element
-var createCourseModal = document.getElementById("createCourseModal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-createCourseBtn.onclick = function() {
-  createCourseModal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  createCourseModal.style.display = "none";
-}
-
-// When the user clicks outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == createCourseModal) {
-    createCourseModal.style.display = "none";
-  }
-}
-    </script>
+    // When the user clicks outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == createCourseModal) {
+        createCourseModal.style.display = "none";
+      }
+    }
+  </script>
 </body>
+
 </html>
+{% endblock %}

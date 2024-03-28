@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-    --primary-color: #A7B5FC;
+    --primary-color: rgb(232, 238, 247);
     --secondary-color: #717775;
 }
 
@@ -40,10 +40,10 @@ body {
 
 .container__left p {
     max-width: 500px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color: black;
-    margin-bottom: -90px;
+    margin-bottom: -55px;
 }
 
 .container__right {
@@ -79,7 +79,8 @@ form {
 
 .inputsignup_field {
     position: relative;
-    margin: 0.5rem 0; /* Adjust margin to reduce spacing */
+    margin: 0.5rem 0;
+    /* Adjust margin to reduce spacing */
     display: flex;
     align-items: center;
 }
@@ -87,7 +88,8 @@ form {
 
 form label {
     position: absolute;
-    top: 3px; /* Adjust vertical position */
+    top: 3px;
+    /* Adjust vertical position */
     left: 0;
     transform: translateY(-70%);
     font-size: 0.9rem;
@@ -104,11 +106,11 @@ form select {
     border: none;
     border-bottom: 1px solid var(--secondary-color);
     line-height: 13px;
-    height: 2.5rem; 
+    height: 2.5rem;
 }
 
-form input:not(:placeholder-shown) ~ label,
-form input:focus ~ label {
+form input:not(:placeholder-shown)~label,
+form input:focus~label {
     top: 8px;
     font-size: 0.8rem;
 }
@@ -118,9 +120,9 @@ form p {
 }
 
 form p a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: rgba(84, 55, 134, 1);
     text-decoration: none;
 }
 
@@ -130,17 +132,21 @@ form button {
     margin: auto;
     outline: none;
     border: none;
-    border-radius: 5rem;
-    font-size: 1rem;
     font-weight: 600;
-    color: white;
-    background-color: #543786;
     cursor: pointer;
     transition: 0.3s;
+    background-color: rgba(84, 55, 134, 1);
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: black;
 }
 
 form button:hover {
-    background-color: #543786;
+    color: rgba(84, 55, 134, 1);
+    background-color: rgba(255, 205, 78, 1);
 }
 
 #label1 {
@@ -148,21 +154,29 @@ form button:hover {
     text-align: center;
     display: block;
     width: 100px;
-    background: #543786;
-    color: white;
+    background: #f0eff2;
+    color: rgb(144, 143, 143);
     border-radius: 5px;
     cursor: pointer;
-    position: relative; 
+    position: relative;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 121px;
 }
 
 .input1 {
-    position: absolute; 
-    opacity: 0; /* Hide the original input button */
-    width: 100%; /* Match the width of the label */
-    height: 100%; /* Match the height of the label */
+    position: absolute;
+    opacity: 0;
+    /* Hide the original input button */
+    width: 100%;
+    /* Match the width of the label */
+    height: 100%;
+    /* Match the height of the label */
     cursor: pointer;
+}
+
+.profile-label {
+    font-size: 0.9rem;
+    color: #717775;
 }
 
 /* Add this CSS to style the password hide/show icons */
@@ -178,14 +192,14 @@ form button:hover {
 
 
 .create__account {
-    text-align: center; 
-    margin-top: 20px; 
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* Add this CSS to style the pop-up */
 .popup-overlay {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
     width: 100%;
@@ -196,12 +210,13 @@ form button:hover {
 }
 
 .popup {
-    background-color: #ffffffb5;
-    border: 2px solid var(--secondary-color); 
+    background-color: #ffffff;
+    border: 2px solid var(--secondary-color);
     width: 500px;
     max-width: 90%;
     height: auto;
-    padding: 20px;
+    padding: 30px;
+    padding-left: 40px;
     border-radius: 10px;
     position: relative;
     display: flex;
@@ -221,9 +236,9 @@ form button:hover {
 
 .ok-button {
     background-color: #543786;
-    color: white; 
+    color: white;
     border: none;
-    padding: 10px 50px; 
+    padding: 10px 50px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -238,7 +253,7 @@ form button:hover {
 }
 
 .cancel-button:hover {
-    color: #543786; 
+    color: #543786;
 }
 
 @media (max-width: 788px) {

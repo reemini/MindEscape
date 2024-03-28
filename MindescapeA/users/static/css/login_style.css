@@ -19,6 +19,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+
+
 .container {
   min-height: 100vh;
   display: grid;
@@ -70,18 +72,23 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px; /* Adjust the width as needed */
-  z-index: 999; /* Ensure it's above other content */
-  margin: 20px; /* Adjust margin as needed */
+  width: 150px;
+  /* Adjust the width as needed */
+  z-index: 999;
+  /* Ensure it's above other content */
+  margin: 20px;
+  /* Adjust margin as needed */
 }
 
 .candy {
   position: absolute;
   top: 0px;
   right: -40px;
-  width: 110px; /* Adjust the width as needed */
+  width: 110px;
+  /* Adjust the width as needed */
   height: 109px;
-  z-index: 999; /* Ensure it's above other content */
+  z-index: 999;
+  /* Ensure it's above other content */
 }
 
 .header {
@@ -91,6 +98,7 @@ body {
   color: black;
   text-align: center;
 }
+
 
 form {
   display: grid;
@@ -115,7 +123,8 @@ form {
 }
 
 .forgot-password a {
-  color: rgb(161, 208, 224); /* Change color to match the "Remember me" color */
+  color: rgb(161, 208, 224);
+  /* Change color to match the "Remember me" color */
 }
 
 .remember-me {
@@ -125,30 +134,35 @@ form {
 }
 
 .remember-me input[type="checkbox"] {
-  margin-right: 5px; /* Adjust as needed */
+  margin-right: 5px;
+  /* Adjust as needed */
 }
 
 .remember-me label {
-  color: rgb(161, 208, 224); /* Change color to match the "Forgot password?" color */
+  color: rgb(161, 208, 224);
+  /* Change color to match the "Forgot password?" color */
 }
 
 .spacer {
-  flex-grow: 1; /* Allow the spacer to grow and push "Forgot password?" to the right */
+  flex-grow: 1;
+  /* Allow the spacer to grow and push "Forgot password?" to the right */
 }
 
 form label {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 0;
+  bottom: 2%;
   transform: translateY(-50%);
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: var(--secondary-color);
   pointer-events: none;
   transition: 0.3s;
 }
 
 form input {
-  padding: 0.75rem 0; /* Adjust the top and bottom padding as needed */
+  padding: 0.75rem 0;
+  /* Adjust the top and bottom padding as needed */
   width: 100%;
   outline: none;
   border: none;
@@ -156,8 +170,8 @@ form input {
   line-height: 1px;
 }
 
-form input:not(:placeholder-shown) ~ label,
-form input:focus ~ label {
+form input:not(:placeholder-shown)~label,
+form input:focus~label {
   top: 0;
   font-size: 0.8rem;
 }
@@ -180,17 +194,22 @@ form button {
   margin: auto;
   outline: none;
   border: none;
-  border-radius: 5rem;
-  font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
   background-color: var(--primary-color);
   cursor: pointer;
   transition: 0.3s;
+  background-color: rgba(84, 55, 134, 1);
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  box-shadow: black;
 }
 
 form button:hover {
-  background-color: #103c5c; /* Change background color on hover */
+  color: rgba(84, 55, 134, 1);
+  background-color: rgba(255, 205, 78, 1);
 }
 
 .create__account {
@@ -217,7 +236,8 @@ form button:hover {
 
 #togglePasswordIcon {
   position: absolute;
-  right: 10px; /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;

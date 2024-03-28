@@ -163,6 +163,7 @@ position: fixed; /* Stay in place */
 z-index: 1; /* Sit on top */
 left: 0;
 top: 0;
+padding: auto;
 width: 100%; /* Full width */
 height: 100%; /* Full height */
 overflow: auto; /* Enable scroll if needed */
@@ -173,7 +174,7 @@ background-color: rgba(0, 0, 0, 0.4)/* Enable opacity */
 .modal-content {
 margin: 15% auto; /* 15% from the top and centered */
 width: 40%; /* Could be wider or narrower */
-padding: 0px 50px 50px 50px;
+padding: 40px 50px 50px 50px;
 border: 3px solid #96b6ee;
 border-radius: 30px;
 background-color: #fff; /* White */
@@ -213,8 +214,8 @@ margin-top: 10px;/* Add space after form */
 
 /* Style form elements */
 
-label{
-color: #D6DFEF; /* Apply the specified color to labels */
+.label-userMang{
+color:#000000; /* Apply the specified color to labels */
 font-weight: 100;
 z-index: 100;
 float: left;
@@ -226,12 +227,7 @@ top: 9px;
 background-color: #ffffff;
 font-size: 18px;
 }
-
-input[type="text"],
-input[type="file"],
-input[type="number"],
-input[type="email"],
-textarea {
+.fname, .Lname, .email, .number, .file{
 width: 100%;
 padding: 10px;
 border: 1.9px solid #D6DFEF;
@@ -289,8 +285,8 @@ outline: 0;
 }
 
 .title-create-account{
-color: #D6DFEF; /* Apply the specified color to h2 */
-font-size: 48px; /* Adjust font size */
+color: #000000; /* Apply the specified color to h2 */
+font-size: 30px; /* Adjust font size */
 }
 ::file-selector-button {
 display: none;

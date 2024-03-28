@@ -6,19 +6,19 @@
 
 <div class="Bigcontainer">
     <div class="Setpasswordleft-container">
-        <img src="{% static 'images/setpassword-removebg.png' %}" alt="Set new Password Image">
+        <img src="{% static 'images/Resetpassword-img.png' %}" alt="Set new Password Image">
     </div>
     <div class="Setpasswordright-container">
         <div class="contentNewpassword">
             <h1>Set New Password</h1>
             <form id="setNewPassForm">
                 <div class="Newpassinput">
-                    <input class="setpass" type="password" id="newPassword" required /> 
+                    <input class="setpass" type="password" id="newPassword" required />
                     <label for="newPassword" class="new-password">New Password</label>
                     <i class="toggle-password fas fa-eye-slash" data-target="newPassword"></i>
                 </div>
                 <div class="Newpassinput">
-                    <input class="resetpass" type="password" id="confirmPassword" required /> 
+                    <input class="resetpass" type="password" id="confirmPassword" required />
                     <label for="confirmPassword" class="confirm-password">Confirm Password</label>
                     <i class="toggle-password fas fa-eye-slash" data-target="confirmPassword"></i>
                 </div>
@@ -29,8 +29,8 @@
 </div>
 
 <script>
-    document.querySelectorAll('.toggle-password').forEach(function(icon) {
-        icon.addEventListener('click', function() {
+    document.querySelectorAll('.toggle-password').forEach(function (icon) {
+        icon.addEventListener('click', function () {
             var targetId = this.getAttribute('data-target');
             var targetInput = document.getElementById(targetId);
             if (targetInput.type === 'password') {

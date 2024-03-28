@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #D4DFF0;
+    background-color: rgba(84, 55, 134, 1);
+    ;
     margin: 0;
     padding: 0;
 }
@@ -28,6 +29,8 @@ body {
 .left-container2 img {
     width: 100%;
     height: auto;
+    max-width: 700px;
+    margin-left: 25%;
 }
 
 .right-container2 {
@@ -38,9 +41,10 @@ body {
 }
 
 .contentv {
-    background-color: rgba(255, 255, 255, 0.329);
+    background-color: rgb(231, 219, 253);
     padding: 40px;
-    border-radius: 10px;
+    margin-right: 25%;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -61,26 +65,27 @@ h1 {
     border: none;
     border-bottom: 1px solid #717775;
     line-height: 13px;
-    height: 2.5rem; 
+    height: 2.5rem;
 }
 
 .resetEm:focus {
-    border-color:#A7B5FC;
+    border-color: #A7B5FC;
 }
 
 .label-email {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 0;
-    transform: translateY(-70%);
-    font-size: 0.9rem;
+    transform: translateY(-110%);
+    font-size: 1rem;
     color: #717775;
     pointer-events: none;
     transition: 0.3s;
+    padding-left: 2%;
 }
 
-.input__group2 input:focus ~ .label-email,
-.input__group2 input:valid ~ .label-email {
+.input__group2 input:focus~.label-email,
+.input__group2 input:valid~.label-email {
     top: 0;
     font-size: 0.8rem;
 }
@@ -101,7 +106,8 @@ button {
 }
 
 button#okButton {
-    background-color: #543786; /* Updated color */
+    background-color: #543786;
+    /* Updated color */
 }
 
 .back-to-login {
@@ -150,12 +156,14 @@ button#okButton {
     top: 6px;
     right: 12px;
     font-size: 28px;
-    color: #FEB737; /* Updated color */
+    color: #FEB737;
+    /* Updated color */
     cursor: pointer;
 }
 
 .close-icon:hover {
-    color: #8a5c07; /* Updated color */
+    color: #8a5c07;
+    /* Updated color */
 }
 
 /* Media Queries for Responsiveness */
@@ -163,7 +171,7 @@ button#okButton {
     .container1 {
         flex-direction: column;
     }
-    
+
     .left-container2,
     .right-container2 {
         flex: 1;

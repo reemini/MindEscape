@@ -90,7 +90,7 @@ button:hover {
 
 .grey-box-title {
     color: #000000;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 20px;
     background-image: url(https://odoocdn.com/openerp_website/static/src/img/graphics/underline.svg);
     background-repeat: no-repeat;
@@ -115,14 +115,11 @@ button:hover {
 }
 
 .reminder h3 {
-    color: #333;
+    color: #bd1212;
     margin-bottom: 2px;
+    font-size: 20px;
 }
 
-.reminder h3:hover {
-    font-size: 20px;
-    
-}
 
 .reminder p {
     color: #666;

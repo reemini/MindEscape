@@ -2,14 +2,15 @@
 {% block content %}
 <title>Forget Password</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/forgetpass.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/forgetpass.css' %}">
 
 <div class="container1">
     <div class="left-container2">
-        <img src="{% static 'images/forget.png' %}" alt="Forget Password Image">
+        <img src="{% static 'images/Forgotpassword-img2.png' %}" alt="Forget Password Image">
     </div>
     <div class="right-container2">
         <div class="contentv">
@@ -17,7 +18,7 @@
             <p>Please enter your email address to reset your password.</p>
             <form id="resetForm">
                 <div class="input__group2">
-                    <input class="resetEm" type="email" id="email" required /> 
+                    <input class="resetEm" type="email" id="email" required />
                     <label for="email" class="label-email">Email</label>
                 </div>
                 <button type="submit" id="resetButton">Reset Password</button>
@@ -36,18 +37,18 @@
 </div>
 
 <script>
-    document.getElementById("resetForm").addEventListener("submit", function(event){
+    document.getElementById("resetForm").addEventListener("submit", function (event) {
         event.preventDefault();
         document.getElementById("popup").style.display = "flex";
     });
 
-    document.getElementById("close").addEventListener("click", function(){
+    document.getElementById("close").addEventListener("click", function () {
         document.getElementById("popup").style.display = "none";
     });
 
-    document.getElementById("okButton").addEventListener("click", function(){
+    document.getElementById("okButton").addEventListener("click", function () {
         document.getElementById("popup").style.display = "none";
     });
 </script>
 
-    {% endblock %}
+{% endblock %}
