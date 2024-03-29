@@ -204,3 +204,28 @@
 /* Add styles for data and charts in the analysis section as needed */
 
 /* /*   analysis section end */
+
+/* --------------------------------for sections on the same page--------------------------------- */
+.sections .section {
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: blue;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

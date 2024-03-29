@@ -40,11 +40,12 @@
         </div>
         <div class="right__col">
             <nav>
-                <ul>
-                    <li><a href="{% url 'myCourses' %}">My Course</a></li>
-                    <li><a href="#">My Favorite Courses</a></li>
-                    <li><a href="#">My Auto-generated Courses</a></li>
-                    <li><a href="#">My Analysis</a></li>
+                <ul class="menu">
+                    <li><a href="#course-section">My Profile</a></li>
+                    <li><a href="#section1">My Course</a></li>
+                    <li><a href="#section2">My Favorite Courses</a></li>
+                    <li><a href="#section3">My Auto-generated Courses</a></li>
+                    <li><a href="#section4">My Analysis</a></li>
                 </ul>
             </nav>
 
@@ -57,7 +58,7 @@
                 </div>
             </div>
             <h2 class="profli-recent-courses">Recent Courses</h2>
-            <div class="course-section">
+            <div class="course-section" id="course-section">
                 <!-- Course 1 -->
                 <div class="course-info" onclick="window.location.href='edit-profile.html'">
                     <!-- Course content -->
@@ -113,9 +114,56 @@
                 <!-- Add more courses as needed... -->
             </div>
 
-
+            <div class="sections">
+                <div id="section1" class="section">
+                    <h2>My Course</h2>
+                    <p>This is the content of My Course section.</p>
+                </div>
+                <div id="section2" class="section">
+                    <h2>My Favorite Courses</h2>
+                    <p>This is the content of My Favorite Courses section.</p>
+                </div>
+                <div id="section3" class="section">
+                    <h2>My Auto-generated Courses</h2>
+                    <p>This is the content of My Auto-generated Courses section.</p>
+                </div>
+                <div id="section4" class="section">
+                    <h2>My Analysis</h2>
+                    <p>This is the content of My Analysis section.</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll('.menu a');
+    const courseSection = document.querySelector('.course-section');
+
+    menuLinks.forEach(function(menuLink) {
+        menuLink.addEventListener('click', function(event) {
+            const targetId = menuLink.getAttribute('href').substring(1); // Remove the leading '#' from the href
+            const targetSection = document.getElementById(targetId);
+
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Hide the old course-section
+            courseSection.style.display = 'none';
+
+            // Show only the targeted section
+            targetSection.style.display = 'block';
+
+            event.preventDefault(); // Prevent the default behavior of the link
+        });
+    });
+});
+
+
+    </script>
 </body>
 
 </html>
