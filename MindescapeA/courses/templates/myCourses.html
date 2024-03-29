@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/student.css' %}" />
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -41,22 +42,14 @@
         <div class="right__col">
             <nav>
                 <ul>
-                    <li><a href="{% url 'myCourses' %}">My Course</a></li>
+                    <li><a href="{% url 'myCourses' %}"
+                            style="text-decoration: underline; color: rgba(255, 205, 78, 1);;">My Course</a></li>
                     <li><a href="#">My Favorite Courses</a></li>
                     <li><a href="#">My Auto-generated Courses</a></li>
                     <li><a href="#">My Analysis</a></li>
                 </ul>
             </nav>
-
-            <div class="analysis-section">
-                <h2>Analysis Section</h2>
-
-                <div class="chart-container">
-                    <!-- Your charts or data visualization components go here -->
-
-                </div>
-            </div>
-            <h2 class="profli-recent-courses">Recent Courses</h2>
+            <h2 class="profli-recent-courses">My Courses</h2>
             <div class="course-section">
                 <!-- Course 1 -->
                 <div class="course-info" onclick="window.location.href='edit-profile.html'">
@@ -76,6 +69,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Course 2 -->
                 <div class="course-info" onclick="window.location.href='edit-profile.html'">
                     <img class="course-image" src="{% static 'images/img2.jpeg' %}" alt="Course 2" />
@@ -93,9 +87,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Course 3 -->
                 <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                    <img class="course-image" src="{% static 'images/img3.jpeg' %}" alt="Course 2" />
+                    <img class="course-image" src="{% static 'images/rectangle-14.png' %}"" alt=" Course 2" />
                     <div class="course-title">PRAKTIKA</div>
                     <div class="course-details">
                         <div class="category history">History</div>
@@ -110,7 +103,45 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    <img class="course-image" src="{% static 'images/rectangle-16-3qf.png' %}" alt="Course 2" />
+                    <div class="course-title">PRAKTIKA</div>
+                    <div class="course-details">
+                        <div class="category history">History</div>
+                        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                        <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                        <!-- Inside the course-details div -->
+                        <div class="reviews">
+                            ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                            <p>1K</p> <!-- Number of reviews -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 2" />
+                    <div class="course-title">PRAKTIKA</div>
+                    <div class="course-details">
+                        <div class="category history">History</div>
+                        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                        <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                        <!-- Inside the course-details div -->
+                        <div class="reviews">
+                            ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                            <p>1K</p> <!-- Number of reviews -->
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- Add more courses as needed... -->
+
+
             </div>
 
 

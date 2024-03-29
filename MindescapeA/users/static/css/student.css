@@ -1,327 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1000; /* Set a higher z-index */
-    /* Add other styles as needed */
-}
-
-
-body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    overflow-x: hidden; /* Hide horizontal scrolling */
-}
-
-.student-profile {
-    width: 207px; /* Adjust the width as needed */
+/*----------------------------------- Styles for left__col ---------------------------------------*/
+.left__col {
     position: fixed;
     left: 0;
-    top: 70px; /* Adjust the top value to leave space for the header */
-    background-color: #ffffff;
-    padding: 1rem;
-    /* Remove box-shadow */
-    z-index: 1;
-    overflow-y: auto; /* Allow vertical scrolling */
+    top: 8%;
+    height: 100%;
+    width: 320px;
+    /* Adjust width as needed */
+    /* Gray background */
+    padding: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid #ddd; /* Add a border for separation */
+    text-align: center;
+    z-index: 999;
+    /* Ensure it appears above other content */
 }
 
-/* Rest of your styles... */
+.left__col .img__container {
+    position: relative;
+    margin-bottom: 20px;
+}
 
-.main-content {
-    margin-top: 50px; /* Adjust margin to leave space for the fixed header */
-    margin-left: 220px; /* Adjust margin to accommodate the fixed student profile */
-    /* Add 20px to the left margin to create space for the border */
- 
-    flex-grow: 1;
+.left__col .img__container img {
+    width: 150px;
+    height: 150px;
+    margin-top: 5%;
+    margin-left: 20%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.ID-profile {
+    margin: 5%;
+    font-size: 16px;
+    color: #333;
+    /* Adjust color as needed */
+    margin-bottom: 5px;
+}
+
+.name-profile {
+    margin: 5%;
+    font-size: 24px;
+    color: #333;
+    /* Adjust color as needed */
+    margin-bottom: 10px;
+}
+
+.btn-theme {
+    padding: 10px 20px;
+    margin-top: 2%;
+    border: 2px solid rgba(84, 55, 134, 1);
+    background-color: rgb(255, 255, 255);
+    ;
+    cursor: pointer;
+    border-radius: 30px;
+    color: rgba(84, 55, 134, 1);
+    font-size: 15px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: black;
+}
+
+.btn-theme:hover {
+    color: rgba(84, 55, 134, 1);
+    background-color: rgba(255, 205, 78, 1);
+
+}
+
+.content {
+    margin-top: 20px;
+}
+
+/* ----------------------------------Styles for right__col start--------------------------------- */
+.right__col {
+    margin-left: 320px;
+    /* Ensure right__col starts after left__col */
+    flex: 1;
+    background-color: #fff;
+    /* White background */
     padding: 20px;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow-x: auto; /* Allow horizontal scrolling */
+    border-left: 1px solid #ccc;
+    /* Border separating left and right columns */
+}
+
+.right__col nav {
+    text-align: center;
+}
+
+.right__col nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right__col nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.right__col nav ul li:last-child {
+    margin-right: 0;
+}
+
+.right__col nav ul li a {
+    text-decoration: none;
+    color: #9b9a9a;
+    /* Adjust color as needed */
+    font-size: 16px;
+}
+
+.right__col nav ul li a:hover {
+    color: rgba(255, 205, 78, 1);
+    /* Link color on hover */
+}
+
+.right__col nav ul li a:visited {
+    text-decoration: underline;
+}
+
+/* Styles for right__col  end */
+
+/*------------------------------ course section start ---------------------------------------*/
+
+.profli-recent-courses {
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+.course-section {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-        
-        .student-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        /* ... Your existing styles ... */
-
-.student-details {
-    color: #543786;
-    text-align: center;
-    margin-top: 20px; /* Add space between the profile image and student details */
-}
-
-.student-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.student-role,.role {
-    color: #543786;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 10px; /* Add space between student role and other information */
-}
-
-.purple-box {
-    background-color: #543786;
-    color: white;
-    padding: 10px; /* Increase padding for better spacing */
-    border-radius: 5px;
-    margin-top: 15px; /* Add space between the role box and other student information */
-    text-align: center;
-}
-
-.student-info {
-    margin-top: 15px; /* Add space between different pieces of student information */
-}
-
-/* ... Your existing styles ... */
-
-
-        .student-details {
-            color: #543786;
-            text-align: center;
-        }
-        
-
-
-
-        .search-button,
-        .profile-button {
-            width: 160px;
-            height: 45px;
-            border: none;
-            border-radius: 25px;
-            background-color: #543786;
-            color: #ffffff;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-
-        .profile-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-
-        .profile-button:hover {
-            text-decoration: none;
-        }
-
-        .profile-button:focus {
-            outline: none;
-        }
-
-      
-
-        .course-section {
-            width: calc(100% - 220px); /* Adjust the width as needed */
-            margin-bottom: 20px; /* Add margin between course sections */
-            padding: 20px;
-            border: 1px solid #ddd;
-            overflow-x: auto; /* Allow horizontal scrolling within the course section */
-            white-space: nowrap; /* Prevent text wrapping */
-        }
-
-      
-
-        .course-info {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: inline-block;
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-        }
-
-        .course-image {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .course-title {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-        }
-
-        .course-details {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .course-details p {
-            margin-right: 10px;
-        }
-
-        .course-details img {
-            max-width: 20px;
-            margin-right: 5px;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background: linear-gradient(to right, #4caf50, #ffeb3b);
-            border-radius: 4px;
-        }
-
-        .reviews {
-            display: flex;
-            align-items: center;
-        }
-
-        .reviews img {
-            max-width: 20px;
-            margin-right: 5px;
-        }
-
-        .purple-box {
-            background-color:   #543786; /* Replace with the desired background color */
-            color: white
-
-; /* Replace with the desired text color */
-            padding: 5px;
-            border-radius: 5px;
-            margin-top: 5px;
-            text-align: center;
-        }
-
-        .role,
-        .edit-profile {
-            margin: 0;
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-        }
-
-        .edit-profile:hover {
-            background-color: purple;
-            color: white;
-        }
-
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 3;
-            padding-top: 50px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        
-        .modal-content {
-            max-width: 100%;
-            max-height: 100%;
-            margin: auto;
-            display: block;
-        }
-        
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: #fff;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .close:hover {
-            color: #bbb;
-        }
-        /* Add this CSS at the end of your stylesheet */
 
 .course-info {
-    max-width: 250px; /* Set a maximum width for each course */
-    margin-right: 30px; /* Add margin between courses */
+    width: calc(33.33% - 20px);
+    /* Adjusted width for each course with 20px gap */
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* Adjusted margin to create space between rows */
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s ease;
 }
 
-
-.course-image {
-    max-width: 100%; /* Make the course image responsive */
-    border-radius: 8px;
+.course-info:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .course-title {
-    font-size: 1rem; /* Adjust the font size of the course title */
-    margin-top: 8px; /* Add space between the title and other details */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .course-details {
     margin-top: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .course-details p {
-    margin-right: 10px;
+    margin: 5px 0;
 }
 
-.reviews {
-    display: flex;
-    align-items: center;
-    margin-right: 10px; /* Add margin between reviews and the number of classes */
+.course-image {
+    max-width: 100%;
+    height: auto;
+    /* Ensures the image maintains its aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    /* Add some space between the image and other content */
 }
 
-.reviews img {
-    max-width: 20px;
-    margin-right: 5px;
+/* /*   course section end */
+
+/* /*--------------------------------------   analysis section start ------------------------------*/
+
+.analysis-section {
+    width: 1110px;
+    /* Adjust width as needed */
+    /* The 320px is the width of the left__col */
+    background-color: #FFEBAE;
+    /* White background */
+    padding: 20px;
+    margin-left: 20px;
+    /* Ensure it starts after left__col */
+    margin-top: 20px;
+    /* Add margin from the course-section */
+    box-shadow: 0px 0px 20px rgba(68, 67, 67, 0.1);
 }
 
-.progress-bar {
-    height: 6px; /* Adjust the height of the progress bar */
-}
+/* Add styles for data and charts in the analysis section as needed */
 
-/* ... Your existing styles ... */
-
-@media screen and (max-width: 768px) {
-    .student-profile {
-        max-width: 100%;
-    }
-
-    .header {
-        padding: 1rem;
-    }
-
-    .main-content {
-        margin-top: 50px;
-    }
-
-    .course-section {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-    }
-
-    .course-info {
-        max-width: 100%;
-        margin-right: 10px;
-    }
-}
-
-/* ... Your existing styles ... */
+/* /*   analysis section end */

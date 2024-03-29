@@ -22,3 +22,6 @@ def firstPageOfCreateCourse(request):
 
 def CourseInner(request):
     return render(request,'CourseInner.html')
+
+def myCourses(request):
+    return render(request,'myCourses.html')

@@ -27,6 +27,7 @@ urlpatterns = [
     path('courses',views.courses, name = 'courses'),
     path('firstPageOfCreateCourse',views.firstPageOfCreateCourse, name = 'firstPageOfCreateCourse'),
     path('CourseInner',views.CourseInner, name = 'CourseInner'),
+    path('myCourses',views.myCourses, name = 'myCourses'),
 
 ]
 
