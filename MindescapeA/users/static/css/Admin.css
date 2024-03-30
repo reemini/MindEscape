@@ -100,8 +100,8 @@ button:hover {
     background-position: center;
     text-align: center;
 }
-
-.reminder {
+/* -------------------------------- future work--------------------------------- */
+/* .reminder {
     background-color: #fff;
     padding: 10px;
     margin-bottom: 10px;
@@ -124,4 +124,4 @@ button:hover {
 .reminder p {
     color: #666;
     font-size: 14px;
-}
+} */

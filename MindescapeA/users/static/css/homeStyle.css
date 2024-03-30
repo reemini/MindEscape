@@ -141,6 +141,13 @@ section {
     border-radius: 30% 0% 0% 0%;
 }
 
+.GO4 {
+    color: #543787;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
 .funders .fiun-title {
     line-height: 0.5;
     color: black;

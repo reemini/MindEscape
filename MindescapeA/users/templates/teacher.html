@@ -2,163 +2,350 @@
 {% load static %}
 {% block content %}
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <title>Teacher Profile</title>
-    {% load static %}
+    <title>Educator Profile</title>
+    <!-- custom css -->
     <link rel="stylesheet" href="{% static 'css/teacher.css' %}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho%3A400" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder%3A400" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imprima%3A400" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-
 <body>
-    <!-- Main Content (Teacher Profile and Courses Section) -->
-    <div class="main-content">
-        <!-- Teacher Profile Info -->
-        <div class="teacher-profile">
-            <!-- Customize teacher profile information -->
-            <!-- Modified teacher avatar image -->
-            <img class="teacher-avatar" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Teacher Avatar"
-                onclick="openPopup('./assets/rectangle-16-hiD.png')" />
-
-            <div class="teacher-details">
-                <p class="teacher-name">Ali Shokry</p>
-                <div class="teacher-role">UI - UX Designer</div>
-                <div class="teacher-role">
-                    <p class="role">Teacher</p>
-                </div>
-                <div class="teacher-info">
-                    <p class="teacher-email">SrAli@gmail.com</p>
-                    <hr />
-                    <p class="teacher-courses">Courses Published: 3</p>
-                    <div class="purple-box edit-profile" onclick="window.location.href='edit-profile.html'">
-                        <p class="role">Edit Profile</p>
+    <div class="header__wrapper">
+        <div class="cols__container">
+            <div class="left__col">
+                <div class="img__container">
+                    <img src="{% static 'images/profile-img.png' %}" alt="">
+                    <h2 class="name-profile">Eyad Salem</h2>
+                    <p class="ID-profile">4010365</p>
+                    <p class="ProfeTitle-profile">Software Engineer</p>
+                    <p class="company-profile">Work at AWS Acadimy Company</p>
+                    <div class="content">
+                        <hr>
+                        <p> Software engineer extraordinaire, skilled in full-stack development and passionate about
+                            crafting innovative solutions to complex problems.</p>
+                        <div class="pro-links">
+                            <a href="#"><i class="fa-brands fa-linkedin" style="color: #543786;"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- HTML structure for the pop-up box -->
-            <div class="popup-container" id="popupContainer">
-                <div class="popup-content">
-                    <span class="close-btn" onclick="closePopup()">×</span>
-                    <img class="popup-image" id="popupImage" src="" alt="Profile Image" />
+
+                    <button class="btn-theme">Edit Profile</button>
                 </div>
             </div>
 
         </div>
+        <div class="right__col">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#MyPublishedCourses">My Published Courses</a></li>
+                    <li><a href="#MyArchive">My Archive</a></li>
+                </ul>
+            </nav>
 
-        <!-- Courses Content -->
-        <div class="course-section">
-            <h2 class="course-header">
-                My Published Courses
-                <button class="create-course-button" onclick="window.location.href='create-course.html'">Create
-                    Course</button>
-            </h2>
-
-            <!-- Course 1 -->
-            <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-12-e2R.png' %}" alt="Course 1" />
-                <div class="course-title">ALRHAZ</div>
-                <div class="course-details">
-                    <p>210 Students</p>
-                    <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>9524</p>
+            <div class="analysis-section">
+                <!-- Information A1.1 and A1.2 -->
+                <div class="analysis-info">
+                    <div class="info-box">
+                        <h3>Number of enrolled students in all courses:</h3>
+                        <span id="total-courses">0</span>
                     </div>
-                    <p>13 Classes</p>
                 </div>
-                <!-- Add more course details or customize as needed... -->
             </div>
 
-            <!-- Course 2 -->
-            <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 2" />
-                <div class="course-title">PRAKTIKA</div>
-                <div class="course-details">
-                    <p>386 Students</p>
-                    <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>1K</p>
+            <div class="course-section" id="course-section">
+                <!-- <div class="title-profile">
+                    <h2 class="profli-recent-courses">Recent Courses</h2>
+                </div> -->
+                <!-- Course 1 -->
+                <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    <!-- Course content -->
+                    <img class="course-image" src="{% static 'images/img1.jpeg' %}" alt="Course 1" />
+                    <div class="course-title">ALRHAZ</div>
+                    <div class="course-details">
+                        <div class="category-type">science</div>
+                        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+
+                        <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                        <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                        <div class="reviews">
+                            ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                            <p>1K</p> <!-- Number of reviews -->
+                        </div>
                     </div>
-                    <p>41 Classes</p>
                 </div>
-                <!-- Add more course details or customize as needed... -->
-            </div>
-
-            <!-- Course 3 -->
-            <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-12.png' %}" alt="Course 3" />
-                <div class="course-title">ADCRUS</div>
-                <div class="course-details">
-                    <p>500 Students</p>
-                    <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>5436</p>
+                <!-- Course 2 -->
+                <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    <img class="course-image" src="{% static 'images/img2.jpeg' %}" alt="Course 2" />
+                    <div class="course-title">PRAKTIKA</div>
+                    <div class="course-details">
+                        <div class="category-type">science</div>
+                        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                        <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                        <!-- Inside the course-details div -->
+                        <div class="reviews">
+                            ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                            <p>1K</p> <!-- Number of reviews -->
+                        </div>
                     </div>
-                    <p>10 Classes</p>
                 </div>
-                <!-- Add more course details or customize as needed... -->
-            </div>
-
-            <!-- Course 4 -->
-            <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-14.png' %}" alt="Course 4" />
-                <div class="course-title">ADCRUS</div>
-                <div class="course-details">
-                    <p>500 Students</p>
-                    <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>5436</p>
+                <!-- Course 3 -->
+                <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    <img class="course-image" src="{% static 'images/img3.jpeg' %}" alt="Course 2" />
+                    <div class="course-title">PRAKTIKA</div>
+                    <div class="course-details">
+                        <div class="category-type">History</div>
+                        <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                        <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                        <!-- Inside the course-details div -->
+                        <div class="reviews">
+                            ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                            <p>1K</p> <!-- Number of reviews -->
+                        </div>
                     </div>
-                    <p>10 Classes</p>
                 </div>
-                <!-- Add more course details or customize as needed... -->
+                <!-- Add more courses as needed... -->
             </div>
+            <!-- ---------section start here------------------- -->
+            <div class="sections">
+                <div id="MyPublishedCourses" class="section">
+                    <div class="course-section">
 
-            <!-- Course 5 -->
-            <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                <img class="course-image" src="{% static 'images/rectangle-14-uVF.png' %}" alt="Course 5" />
-                <div class="course-title">ADCRUS</div>
-                <div class="course-details">
-                    <p>500 Students</p>
-                    <div class="reviews">
-                        <img src="{% static 'images/eosstaroutlined-FAV.png' %}" alt="Stars" />
-                        <p>5436</p>
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <!-- Course content -->
+                            <img class="course-image" src="{% static 'images/img1.jpeg' %}" alt="Course 1" />
+                            <div class="course-title">ALRHAZ</div>
+                            <div class="course-details">
+                                <div class="category-type">science</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/img2.jpeg' %}" alt="Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">science</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/rectangle-14.png' %}"" alt=" Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">History</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/rectangle-16-3qf.png' %}" alt="Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">History</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">History</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more courses as needed... -->
                     </div>
-                    <p>10 Classes</p>
                 </div>
-                <!-- Add more course details or customize as needed... -->
+                <div id="MyArchive" class="section">
+                    <div class="course-section">
+                        <!-- Course 1 -->
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/rectangle-16-3qf.png' %}" alt="Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">History</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                            <img class="course-image" src="{% static 'images/rectangle-16-hiD.png' %}" alt="Course 2" />
+                            <div class="course-title">PRAKTIKA</div>
+                            <div class="course-details">
+                                <div class="category-type">History</div>
+                                <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
+                                <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
+                                <!-- Inside the course-details div -->
+                                <div class="reviews">
+                                    ⭐⭐⭐⭐⭐ <!-- Unicode stars for ratings -->
+                                    <p>1K</p> <!-- Number of reviews -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more courses as needed... -->
+                    </div>
+                </div>
             </div>
-
-            <!-- Add more courses as needed... -->
-
-            <!-- Create additional courses with the same structure as above... -->
-
         </div>
     </div>
-    <script>
-        // JavaScript to open the pop-up
-        function openPopup(imagePath) {
-            var popupContainer = document.getElementById("popupContainer");
-            var popupImage = document.getElementById("popupImage");
 
-            popupImage.src = imagePath;
-            popupContainer.style.display = "flex";
+    <script>
+        // script for moving through the sections on the same page---------------------
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuLinks = document.querySelectorAll('.menu a');
+            const courseSection = document.querySelector('.course-section');
+
+            menuLinks.forEach(function (menuLink) {
+                menuLink.addEventListener('click', function (event) {
+                    const targetId = menuLink.getAttribute('href').substring(1); // Remove the leading '#' from the href
+                    const targetSection = document.getElementById(targetId);
+
+                    // Hide all sections
+                    const sections = document.querySelectorAll('.section');
+                    sections.forEach(function (section) {
+                        section.style.display = 'none';
+                    });
+
+                    // Hide the old course-section
+                    courseSection.style.display = 'none';
+
+                    // Show only the targeted section
+                    targetSection.style.display = 'block';
+
+                    // Remove active class from all links
+                    menuLinks.forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+
+                    // Add active class to the clicked link
+                    menuLink.classList.add('active');
+
+                    event.preventDefault(); // Prevent the default behavior of the link
+                });
+            });
+        });
+
+        // script for the category---------------------------------------
+        function toggleDropdown() {
+            document.getElementById("categoryDropdown").classList.toggle("show");
         }
 
-        // JavaScript to close the pop-up
-        function closePopup() {
-            var popupContainer = document.getElementById("popupContainer");
-            popupContainer.style.display = "none";
+        function searchCategory() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("categorySearchInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("categoryDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+        // script for making the numbers of analysis increase----------------------------
+        window.addEventListener('DOMContentLoaded', () => {
+            const totalCoursesSpan = document.getElementById('total-courses');
+            const coursesPerMonthSpan = document.getElementById('courses-per-month');
+            const completedPercentageSpan = document.getElementById('completed-percentage');
+
+            const totalCourses = 105 /*  total courses value */;
+            const coursesPerMonth = 15/*  courses per month value */;
+            const completedPercentage = 76 /*  completed percentage value */;
+
+            animateNumber(totalCoursesSpan, totalCourses);
+            animateNumber(coursesPerMonthSpan, coursesPerMonth);
+            animatePercentage(completedPercentageSpan, completedPercentage);
+        });
+
+        function animateNumber(element, finalValue) {
+            let currentValue = 0;
+            const increment = Math.ceil(finalValue / 100); // Divide final value by 100 for smooth animation
+            const interval = setInterval(() => {
+                currentValue += increment;
+                element.textContent = currentValue;
+                if (currentValue >= finalValue) {
+                    clearInterval(interval);
+                }
+            }, 20); // Adjust the interval for desired animation speed
+        }
+
+        function animatePercentage(element, finalValue) {
+            let currentValue = 0;
+            const increment = Math.ceil(finalValue / 100); // Divide final value by 100 for smooth animation
+            const interval = setInterval(() => {
+                currentValue += increment;
+                element.textContent = currentValue + '%';
+                if (currentValue >= finalValue) {
+                    clearInterval(interval);
+                }
+            }, 20); // Adjust the interval for desired animation speed
         }
 
     </script>
