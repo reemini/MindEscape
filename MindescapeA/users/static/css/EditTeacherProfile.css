@@ -70,7 +70,7 @@ body {
   
   .form-group input:focus,
   .form-group textarea:focus {
-    outline: none;
+    outline: none; 
     border-bottom-color: #543787;
   }
   

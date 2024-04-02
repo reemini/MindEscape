@@ -76,16 +76,22 @@
           style="color: #D4E0F0;"></i></h2>
       <form action="/action_page.php">
         <label class="label-userMang" for="firstname">First Name:</label>
-        <input class="fname" type="text" id="firstname" name="firstname" placeholder="Enter Your First Name..">
+        <input class="fname" type="text" id="firstname" name="firstname">
 
         <label class="label-userMang" for="Lastname">Last Name:</label>
-        <input class="Lname" type="text" id="Lastname" name="Lastname" placeholder="Enter Your Last Name..">
+        <input class="Lname" type="text" id="Lastname" name="Lastname">
 
         <label class="label-userMang" for="Email">Email:</label>
-        <input class="email" type="email" id="Email" name="Email" placeholder="Enter Your Email..">
+        <input class="email" type="email" id="Email" name="Email" >
 
-        <label class="label-userMang" for="Age">Age:</label>
-        <input class="number" type="number" id="Age" name="Age" placeholder="Enter Your Age..">
+        <label class="label-userMang" for="Email">password:</label>
+        <input class="Lname" type="password" id="password" name="password" >
+
+        <label class="label-userMang" for="Email">Confirm Password:</label>
+        <input class="Lname" type="password" id="password" name="Confirm-Password" >
+
+        <label class="label-userMang" for="Age">Birth Date:</label>
+        <input class="number" type="date" id="birthday" name="birthday">
 
         <label class="label-userMang" for="Role">Role:</label>
         <select class="minimal">
@@ -94,10 +100,8 @@
           <option value="Admin">Admin</option>
         </select>
         <br>
-        <label class="label-userMang" for="userimg">Profile Picture:</label>
-        <input class="file" type="file" id="userimg" name="userimg" accept="image/*">
         <br>
-        <button type="submit" class="createUserBtn">Create</button>
+        <button type="submit" class="createUserBtn">Add User</button>
       </form>
     </div>
 
@@ -160,6 +164,7 @@
         createCourseModal.style.display = "none";
       }
     }
+    
   </script>
 </body>
 
