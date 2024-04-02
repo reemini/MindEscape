@@ -25,8 +25,11 @@ def student(request):
 def teacher(request):
     return render(request, 'teacher.html')
 
-def editProfile(request):
-    return render(request, 'edit-profile.html')
+def EditStudentProfile(request):
+    return render(request, 'EditStudentProfile.html')
+
+def EditTeacherProfile(request):
+    return render(request, 'EditTeacherProfile.html')
 
 def AdminPanel(request):
     return render(request,'AdminPanel.html')

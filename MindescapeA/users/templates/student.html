@@ -21,7 +21,7 @@
         <div class="cols__container">
             <div class="left__col">
                 <div class="img__container">
-                    <img src="{% static 'images/profile-img.png' %}" alt="">
+                    <img src="{% static 'images/StudentPictureProfile.jpg' %}" alt="">
                     <h2 class="name-profile">Omer Osman</h2>
                     <p class="ID-profile">4010852</p>
                     <div class="content">
@@ -33,7 +33,7 @@
                             American innovation by reducing bureaucratic hurdles to lifesaving technologies</p>
                     </div>
 
-                    <button class="btn-theme">Edit Profile</button>
+                    <a href="{% url 'EditStudentProfile' %}"><button class="btn-theme">Edit Profile</button></a>
                 </div>
             </div>
 

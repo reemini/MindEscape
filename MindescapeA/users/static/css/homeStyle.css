@@ -434,6 +434,16 @@ section {
     padding-top: 0;
 }
 
+.category-type {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    background-image: url(https://odoocdn.com/openerp_website/static/src/img/highlights/yellow_highlight_bold_05.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 59px;
+}
+
 .course .courses .details {
     padding: 0 15px 0 15px;
     text-align: center;

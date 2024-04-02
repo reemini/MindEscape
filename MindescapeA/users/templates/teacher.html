@@ -21,7 +21,7 @@
         <div class="cols__container">
             <div class="left__col">
                 <div class="img__container">
-                    <img src="{% static 'images/profile-img.png' %}" alt="">
+                    <img src="{% static 'images/TeacherPictureProfile.png' %}" alt="">
                     <h2 class="name-profile">Eyad Salem</h2>
                     <p class="ID-profile">4010365</p>
                     <p class="ProfeTitle-profile">Software Engineer</p>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
 
-                    <button class="btn-theme">Edit Profile</button>
+                    <a href="{% url 'EditTeacherProfile' %}"><button class="btn-theme">Edit Profile</button></a>
                 </div>
             </div>
 
@@ -58,6 +58,8 @@
                 </div>
             </div>
 
+            <button class="btn-theme-createcourse" id="createCourseBtn">Create New Course</button>
+
             <div class="course-section" id="course-section">
                 <!-- <div class="title-profile">
                     <h2 class="profli-recent-courses">Recent Courses</h2>
@@ -70,8 +72,8 @@
                     <div class="course-details">
                         <div class="category-type">science</div>
                         <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
-                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
-
+                        <div class="students"><span class="emoji">&#128100;</span> 60</div>
+                        <div class="completion">34%</div> <!-- Percentage of completion -->
                         <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                         <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                         <div class="reviews">
@@ -87,7 +89,8 @@
                     <div class="course-details">
                         <div class="category-type">science</div>
                         <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
-                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 900</div>
+                        <div class="completion">82%</div> <!-- Percentage of completion -->
                         <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                         <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                         <!-- Inside the course-details div -->
@@ -104,7 +107,8 @@
                     <div class="course-details">
                         <div class="category-type">History</div>
                         <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
-                        <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                        <div class="students"><span class="emoji">&#128100;</span> 100</div>
+                        <div class="completion">100%</div> <!-- Percentage of completion -->
                         <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                         <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                         <!-- Inside the course-details div -->
@@ -129,7 +133,7 @@
                                 <div class="category-type">science</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
                                 <div class="students"><span class="emoji">&#128100;</span> 500</div>
-
+                                <div class="completion">80%</div> <!-- Percentage of completion -->
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <div class="reviews">
@@ -145,7 +149,8 @@
                             <div class="course-details">
                                 <div class="category-type">science</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
-                                <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="students"><span class="emoji">&#128100;</span> 500 <div class="completion">80%</div> <!-- Percentage of completion --></div>
+                                
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <!-- Inside the course-details div -->
@@ -157,12 +162,13 @@
                         </div>
 
                         <div class="course-info" onclick="window.location.href='edit-profile.html'">
-                            <img class="course-image" src="{% static 'images/rectangle-14.png' %}"" alt=" Course 2" />
+                            <img class="course-image" src="{% static 'images/rectangle-14.png' %}" alt=" Course 2" />
                             <div class="course-title">PRAKTIKA</div>
                             <div class="course-details">
                                 <div class="category-type">History</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
                                 <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="completion">80%</div> <!-- Percentage of completion -->
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <!-- Inside the course-details div -->
@@ -180,6 +186,7 @@
                                 <div class="category-type">History</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
                                 <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="completion">80%</div> <!-- Percentage of completion -->
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <!-- Inside the course-details div -->
@@ -197,6 +204,7 @@
                                 <div class="category-type">History</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
                                 <div class="students"><span class="emoji">&#128100;</span> 500</div>
+                                <div class="completion">80%</div> <!-- Percentage of completion -->
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <!-- Inside the course-details div -->
@@ -248,6 +256,38 @@
                         <!-- Add more courses as needed... -->
                     </div>
                 </div>
+            </div>
+
+            <!-- -------------------------------pop-up create course---------------------------- -->
+            <div id="createCourseModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="title-create-coures">Create Course <i class="fa-solid fa-microphone-lines"
+                            style="color: #513886;"></i></h2>
+                    <form action="/action_page.php">
+                        <label class="label-Course" for="courseTitle">Course Title:</label>
+                        <input class="Ctext" type="text" id="courseTitle" name="courseTitle" placeholder="Enter course title..">
+                        <label class="label-Course" for="courseTopic">Course Topic:</label>
+                        <input class="Ctext" type="text" id="courseTopic" name="courseTopic" placeholder="Enter course topic..">
+                        <label class="label-Course" for="courseDescription">Course Description:</label>
+                        <textarea id="courseDescription" name="courseDescription"
+                            placeholder="Write a course description.."></textarea>
+
+                        <label class="label-Course" for="difficultyLevel">Difficulty Level:</label>
+                        <select class="minimal">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                        <br>
+                        <label class="label-Course" for="courseImage">Picture:</label>
+                        <input  class="Ctext" type="file" id="courseImage" name="courseImage" accept="image/*">
+                        <br>
+                        <button type="submit" class="createCourseBtn">Create</button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
@@ -347,6 +387,34 @@
                 }
             }, 20); // Adjust the interval for desired animation speed
         }
+
+        // script for pop-up create new course---------------------------------------
+        // Get the button that opens the modal
+        var createCourseBtn = document.getElementById("createCourseBtn");
+
+        // Get the modal element
+        var createCourseModal = document.getElementById("createCourseModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        createCourseBtn.onclick = function () {
+            createCourseModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            createCourseModal.style.display = "none";
+        }
+
+        // When the user clicks outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == createCourseModal) {
+                createCourseModal.style.display = "none";
+            }
+        }
+
 
     </script>
 </body>
