@@ -20,14 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('educator_courses/', views.educator_courses, name='educator_courses'),
-    path('courses/<int:course_id>/', views.course_detail, name='course_detail'),
-    path('generated_course/', views.generated_course, name='generated_course'),
     path('courseinfo',views.courseinfo, name = 'courseinfo'),
     path('courses',views.courses, name = 'courses'),
-    path('firstPageOfCreateCourse',views.firstPageOfCreateCourse, name = 'firstPageOfCreateCourse'),
     path('CourseInner',views.CourseInner, name = 'CourseInner'),
-    path('myCourses',views.myCourses, name = 'myCourses'),
 
 ]
 
