@@ -1,0 +1,112 @@
+/* Body and Global Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    background: linear-gradient(to bottom, #f7f7f7, #e6e6e6); /* Soft background gradient */
+    margin: 0;
+    line-height: 1.6;
+    color: #333; /* Neutral text color */
+}
+
+/* Quiz Container Styling */
+#quiz {
+    max-width: 900px; /* Restrict width to keep content centralized */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Heading Styling */
+h1, h2 {
+    text-align: center; /* Center headings */
+    color: #2c3e50; /* Darker text color */
+    margin-bottom: 15px; /* Space below headings */
+}
+
+/* Question Block Styling */
+.question {
+    margin-bottom: 20px; /* Space between questions */
+    padding: 10px;
+    border-radius: 6px; /* Rounded corners */
+    background-color: #f0f0f0; /* Soft gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+input[type="radio"] {
+    margin-right: 10px; /* Space between radio buttons */
+}
+
+/* Button Styling */
+input[type="button"] {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    margin: 20px auto 0; /* Center button and space from content */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+input[type="button"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* Chat Prompt Styling */
+#chat-prompt {
+    position: fixed; /* Keep the prompt at the bottom of the page */
+    bottom: 20px; /* Distance from the bottom of the page */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center the prompt */
+    display: flex; /* Use flexbox for aligned layout */
+    align-items: center; /* Vertically center the contents */
+    padding: 15px 20px; /* Increase padding for more space */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* More rounded corners */
+    background-color: white; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    z-index: 1000; /* Ensure prompt stays on top */
+}
+
+/* Prompt Label Styling */
+#chat-prompt label {
+    margin-right: 15px; /* Increased space between label and inputs */
+    font-weight: bold; /* Emphasize the label text */
+}
+
+/* Input Field Styling */
+#chat-prompt input {
+    margin-right: 15px; /* Increased space between inputs */
+    padding: 8px; /* Increase padding in the inputs */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Small Number Input Styling */
+#prompt-number {
+    width: 80px; /* Adjust width as needed */
+}
+
+/* Next Button Styling */
+#chat-prompt input[type="button"] {
+    width: auto; /* Allow natural button width */
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    padding: 8px 15px; /* Increase padding for more space */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+#chat-prompt input[type="button"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

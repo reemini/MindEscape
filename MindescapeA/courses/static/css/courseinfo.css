@@ -1,4 +1,4 @@
-/* External CSS links */
+
 .link {
   color: #007bff;
   text-decoration: none;
@@ -8,7 +8,7 @@
   color: #0056b3;
 }
 
-/* Styles for courseinfo-infoSection */
+
 .courseinfo-infoSection {
   display: flex;
   align-items: center;
@@ -25,20 +25,19 @@
   /* Ensure it stays above other content */
 }
 
-/* Styles for courseInfoRight */
+
 .courseInfoRight {
   flex: 1;
   /* Take up remaining space */
 }
 
-/* Styles for image-and-info */
+
 .image-and-info {
   flex: 1;
   padding-left: 120px;
   padding-right: 120px;
 }
 
-/* Styles for about-image */
 .about-image {
   width: 90%;
   /* Make the image take up 100% of its container's width */
@@ -52,7 +51,6 @@
   border-radius: 10%;
 }
 
-/* Styles for info */
 .info {
   flex: 1;
   /* Take up remaining space */
@@ -94,13 +92,11 @@
 }
 
 
-/* Styles for courseInfoNev */
 .courseInfoNev {
   margin-top: 20px;
   display: flex;
 }
 
-/* Styles for navigation menu */
 nav {
   margin-top: 100px;
   margin-bottom: 20px;
@@ -133,7 +129,6 @@ nav {
   font-size: 20px;
 }
 
-/* Styles for skill1, skill2, skill3, skill4 */
 .Category {
   background-color: #f0f0f0;
   padding: 5px 10px;
@@ -180,7 +175,6 @@ nav {
   font-size: 16px;
 }
 
-/* Styles for Sections-box */
 .Sections-box {
   border: 1px solid #ccc;
   padding: 50px;
@@ -189,38 +183,33 @@ nav {
   border-radius: 10px;
 }
 
-/* Styles for Sections-title */
 .Sections-title {
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
-/* Styles for Sections-rating */
 .Sections-rating {
   display: flex;
   align-items: center;
 }
 
-/* Styles for stars */
 .stars {
   color: gold;
   font-size: 14px;
 }
 
-/* Styles for rating-number */
 .rating-number {
   margin-left: 5px;
   font-size: 14px;
 }
 
-/* Styles for Sections-description */
 .Sections-description {
   font-size: 14px;
   margin-top: 5px;
 }
 
-/* Styles for expand-details */
+
 .expand-details {
   cursor: pointer;
   position: absolute;
@@ -234,7 +223,7 @@ nav {
   margin-left: 150px;
 }
 
-/* Styles for Sections-details-info */
+
 .Sections-details-info {
   display: none;
   margin-top: 5px;
@@ -242,7 +231,7 @@ nav {
   border-top: 1px solid #ccc;
 }
 
-/* Styles for more-details */
+
 .more-details {
   font-size: 14px;
   margin-top: 5px;

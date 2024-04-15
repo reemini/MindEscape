@@ -104,13 +104,13 @@
 }
 
 .course-image {
-  max-width: 100%;
-  height: auto;
-  /* Ensures the image maintains its aspect ratio */
+  width: 100%;  /* Set the width to 100% to fill the container */
+  height: 40%;  /* Maintain the aspect ratio */
   border-radius: 8px;
   margin-bottom: 10px;
   /* Add some space between the image and other content */
 }
+
 
 /* /*   course section end */
 

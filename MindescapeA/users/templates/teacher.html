@@ -59,13 +59,30 @@
             </div>
 
             <button class="btn-theme-createcourse" id="createCourseBtn">Create New Course</button>
-
+            <div class="hamburger-menu">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <div class="menu-content" id="menu-content">
+                    <ul>
+                        <li onclick="viewCourse()">View Course</li>
+                        <li onclick="editCourse()">Edit Course</li>
+                        <li onclick="showConfirmPopup()">Delete Course</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Confirmation Popup -->
+            <div id="confirm-popup" class="popup">
+                <div class="popup-content">
+                    <p>Are you sure you want to delete the course?</p>
+                    <div class="button-group">
+                        <button onclick="deleteCourse()">Yes</button>
+                        <button onclick="closePopup()">No</button>
+                    </div>
+                </div>
+            </div>
             <div class="course-section" id="course-section">
-                <!-- <div class="title-profile">
-                    <h2 class="profli-recent-courses">Recent Courses</h2>
-                </div> -->
-                <!-- Course 1 -->
                 <div class="course-info" onclick="window.location.href='edit-profile.html'">
+                    
                     <!-- Course content -->
                     <img class="course-image" src="{% static 'images/img1.jpeg' %}" alt="Course 1" />
                     <div class="course-title">ALRHAZ</div>
@@ -149,8 +166,9 @@
                             <div class="course-details">
                                 <div class="category-type">science</div>
                                 <div class="hours"><span class="emoji">&#9200;</span> 20 hours</div>
-                                <div class="students"><span class="emoji">&#128100;</span> 500 <div class="completion">80%</div> <!-- Percentage of completion --></div>
-                                
+                                <div class="students"><span class="emoji">&#128100;</span> 500 <div class="completion">
+                                        80%</div> <!-- Percentage of completion --></div>
+
                                 <div class="lessons"><span class="emoji">&#128214;</span> 10</div>
                                 <div class="instructor"><span class="emoji">&#128188;</span> John Doe</div>
                                 <!-- Inside the course-details div -->
@@ -267,9 +285,11 @@
                             style="color: #513886;"></i></h2>
                     <form action="/action_page.php">
                         <label class="label-Course" for="courseTitle">Course Title:</label>
-                        <input class="Ctext" type="text" id="courseTitle" name="courseTitle" placeholder="Enter course title..">
+                        <input class="Ctext" type="text" id="courseTitle" name="courseTitle"
+                            placeholder="Enter course title..">
                         <label class="label-Course" for="courseTopic">Course Topic:</label>
-                        <input class="Ctext" type="text" id="courseTopic" name="courseTopic" placeholder="Enter course topic..">
+                        <input class="Ctext" type="text" id="courseTopic" name="courseTopic"
+                            placeholder="Enter course topic..">
                         <label class="label-Course" for="courseDescription">Course Description:</label>
                         <textarea id="courseDescription" name="courseDescription"
                             placeholder="Write a course description.."></textarea>
@@ -282,7 +302,7 @@
                         </select>
                         <br>
                         <label class="label-Course" for="courseImage">Picture:</label>
-                        <input  class="Ctext" type="file" id="courseImage" name="courseImage" accept="image/*">
+                        <input class="Ctext" type="file" id="courseImage" name="courseImage" accept="image/*">
                         <br>
                         <button type="submit" class="createCourseBtn">Create</button>
                     </form>
@@ -414,6 +434,46 @@
                 createCourseModal.style.display = "none";
             }
         }
+
+        // secript for menu (view, edit, and delete)---------------------------------------------------------
+        // Toggle menu visibility
+function toggleMenu() {
+    const menuContent = document.getElementById('menu-content');
+    menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+}
+
+// Handle view course
+function viewCourse() {
+    alert('View Course selected');
+    toggleMenu(); // Hide the menu
+}
+
+// Handle edit course
+function editCourse() {
+    alert('Edit Course selected');
+    toggleMenu(); // Hide the menu
+}
+
+// Display the confirmation popup
+function showConfirmPopup() {
+    toggleMenu(); // Hide the menu
+    const confirmPopup = document.getElementById('confirm-popup');
+    confirmPopup.style.display = 'flex';
+}
+
+// Handle course deletion
+function deleteCourse() {
+    alert('Course deleted');
+    closePopup();
+}
+
+// Close popup
+function closePopup() {
+    const confirmPopup = document.getElementById('confirm-popup');
+    confirmPopup.style.display = 'none';
+}
+
+
 
 
     </script>

@@ -25,3 +25,6 @@ def CourseInner(request):
 
 def myCourses(request):
     return render(request,'myCourses.html')
+
+def sectionQuiz(request):
+    return render(request,'sectionQuiz.html')

@@ -23,6 +23,6 @@ urlpatterns = [
     path('courseinfo',views.courseinfo, name = 'courseinfo'),
     path('courses',views.courses, name = 'courses'),
     path('CourseInner',views.CourseInner, name = 'CourseInner'),
-
+    path('sectionQuiz',views.sectionQuiz, name = 'sectionQuiz'),
 ]
 

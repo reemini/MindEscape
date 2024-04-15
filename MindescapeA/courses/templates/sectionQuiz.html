@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title><!-- custom link -->
+    <link rel="stylesheet" href="{% static 'css/sectionQuiz.css' %}">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="quiz">
+        <h1 id="quiz-title">Quiz Title</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <h2>Question 1</h2>
+                <div>
+                    <label>
+                        <input type="radio" name="question1" value="A"> A. Choice A
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question1" value="B"> B. Choice B
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question1" value="C"> C. Choice C
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question1" value="D"> D. Choice D
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>Question 2</h2>
+                <div>
+                    <label>
+                        <input type="radio" name="question2" value="A"> A. Choice A
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question2" value="B"> B. Choice B
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question2" value="C"> C. Choice C
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="question2" value="D"> D. Choice D
+                    </label>
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+            <input type="button" value="Submit" onclick="submitQuiz()">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div id="chat-prompt">
+        <label for="prompt-text">Your Response:</label>
+        <input type="text" id="prompt-text" placeholder="Type your response here...">
+        <label for="prompt-number">Your Number:</label>
+        <input type="number" id="prompt-number" placeholder="Enter a number...">
+        <input type="button" value="Next" onclick="submitPrompt()">
+    </div>
+
+    <script>
+        // script.js
+
+        // Function to submit the prompt response
+        function submitPrompt() {
+            const promptText = document.getElementById('prompt-text').value;
+            const promptNumber = document.getElementById('prompt-number').value;
+
+            // Handle the submitted text and number values here
+            console.log(`Text Response: ${promptText}`);
+            console.log(`Number Response: ${promptNumber}`);
+        }
+
+            // Array of correct answers for the questions
+            const correctAnswers = ['A', 'B']; // Add correct answers for each question
+
+            // Function to submit the quiz and calculate the score
+            function submitQuiz() {
+                const form = document.getElementById('quiz-form');
+                let score = 0;
+
+                // Loop through each question
+                correctAnswers.forEach((correctAnswer, index) => {
+                    const questionName = 'question' + (index + 1);
+                    const selectedAnswer = form.elements[questionName].value;
+
+                    // Compare the selected answer with the correct answer
+                    if (selectedAnswer === correctAnswer) {
+                        score++;
+                    }
+                });
+
+                // Display the result
+                const result = document.getElementById('result');
+                result.textContent = `Your score is ${score} out of ${correctAnswers.length}.`;
+            }
+
+    </script>
+</body>
+
+</html>
+
+{% endblock %}

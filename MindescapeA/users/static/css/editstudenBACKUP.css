@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 20px; /* Reduced margin for better spacing */
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    object-fit: cover;
+    max-width: 100%;
+    bottom: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+  }
+  
+  .edit-icon:hover {
+    background-color: #FFEBAE;
+    transform: scale(1.05);
+  }
+  
+  .form {
+    width: 1100px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    flex-basis: 120px; /* Adjust as needed */
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: #543787;
+  }
+  
+  .btn-theme {
+    margin-top: 2%;
+    margin-left: 40%;
+    background-color: rgba(84, 55, 134, 1);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    transition: background-color 0.3s ease;
+    box-shadow: black;
+  }
+  
+  .btn-theme:hover {
+    color: rgba(84, 55, 134, 1);
+    background-color: rgba(255, 205, 78, 1);
+    transform: translateY(-2px);
+  }
+  
